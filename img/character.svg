@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2684.78 2047.32">
+  <g id="Background">
+    <rect x="22.31" y="15" width="2640" height="792.51" fill="#d7df23" stroke="#d7df23" stroke-miterlimit="10" stroke-width="30"/>
+    <g id="floor">
+      <rect id="floor_background" x="3.85" y="822.51" width="2667.57" height="1200.9" fill="#ff9d8a"/>
+      <g id="floor_lines_2">
+        <g>
+          <g>
+            <line x1="2123.74" y1="827.26" x2="953.36" y2="2026.57" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="1922.83" y1="823.31" x2="752.44" y2="2022.62" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="1711.01" y1="824.49" x2="540.63" y2="2023.8" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="1510.09" y1="820.54" x2="339.71" y2="2019.85" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          </g>
+          <g>
+            <line x1="2671.42" y1="1087.23" x2="1739.47" y2="2042.21" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="2671.42" y1="877.39" x2="1538.55" y2="2038.26" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="2517.29" y1="819.46" x2="1326.74" y2="2039.44" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+            <line x1="2312.16" y1="819.83" x2="1141.78" y2="2019.14" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          </g>
+        </g>
+        <g>
+          <line x1="2671.42" y1="1928.34" x2="2557.02" y2="2045.57" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="2671.42" y1="1718.5" x2="2356.1" y2="2041.62" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="2671.42" y1="1502.63" x2="2144.28" y2="2042.8" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="2682.99" y1="1280.94" x2="1943.36" y2="2038.85" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="1283.5" y1="827.85" x2="113.11" y2="2027.16" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="1082.58" y1="823.9" x2="3.85" y2="1929.29" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="870.76" y1="825.08" x2="4.16" y2="1713.1" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="669.85" y1="821.13" x2="3.85" y2="1503.58" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="476.86" y1="816.13" x2="1.79" y2="1302.94" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="265.85" y1="822.51" x2="3.85" y2="1090.99" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="55.19" y1="822.51" x2="3.85" y2="875.12" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+      </g>
+      <g id="floor_lines_1">
+        <g>
+          <line x1="11.46" y1="1176.43" x2="838.01" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="7.6" y1="1382.32" x2="639.47" y2="2029.8" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="8.75" y1="1599.37" x2="427.92" y2="2028.9" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="4.9" y1="1805.25" x2="218.34" y2="2023.97" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="458.93" y1="815.55" x2="1637.66" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="261.79" y1="821.6" x2="1434.61" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="52.01" y1="822.51" x2="1223.95" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="3.85" y1="982.99" x2="1019.17" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="1283.39" y1="820.21" x2="2462.11" y2="2028.07" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="1086.25" y1="826.26" x2="2259.07" y2="2028.07" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="876.47" y1="827.17" x2="2048.41" y2="2028.07" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="667.82" y1="823.2" x2="1843.63" y2="2028.07" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="2104.22" y1="815.55" x2="2671.42" y2="1396.77" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="1907.08" y1="821.6" x2="2671.42" y2="1604.84" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="1697.31" y1="822.51" x2="2671.42" y2="1820.71" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="1488.66" y1="818.54" x2="2664.47" y2="2023.41" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+        <g>
+          <line x1="2521.43" y1="825.54" x2="2671.42" y2="979.24" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+          <line x1="2312.78" y1="821.57" x2="2671.42" y2="1189.08" fill="none" stroke="#ed1c24" stroke-miterlimit="10" stroke-width="5"/>
+        </g>
+      </g>
+    </g>
+    <g>
+      <g>
+        <path d="M2263.44,1235.24c443.13,0,116.61-544.58,116.61-544.58" transform="translate(3.85 4.23)" fill="#f7941d" stroke="#fbb040" stroke-miterlimit="10" stroke-width="5"/>
+        <path d="M2307.72,1235.24c-561,0-147.63-544.58-147.63-544.58" transform="translate(3.85 4.23)" fill="#f7941d" stroke="#fbb040" stroke-miterlimit="10" stroke-width="5"/>
+      </g>
+      <ellipse cx="2267.28" cy="694.89" rx="123.78" ry="25.67" fill="#754c29" stroke="#fbb040" stroke-miterlimit="10" stroke-width="5"/>
+      <polyline points="2163.94 694.89 2164.4 1151.55 2377.53 1151.55 2411.5 752.02 2383.53 720.56" fill="#f7941d"/>
+    </g>
+    <line x1="2267.28" y1="693.89" x2="2267.28" y2="442.43" fill="#754c29" stroke="#8b5e3c" stroke-miterlimit="10" stroke-width="30"/>
+    <path d="M2539,356c-349.49-69.44-249.36,110.79-249.36,110.79" transform="translate(3.85 4.23)" fill="#00a651" stroke="#00a651" stroke-miterlimit="10" stroke-width="30"/>
+    <path d="M1950.64,356c400.53-69.44,285.78,110.79,285.78,110.79" transform="translate(3.85 4.23)" fill="#00a651" stroke="#00a651" stroke-miterlimit="10" stroke-width="30"/>
+    <rect x="511.51" y="125.32" width="513.61" height="513.61" fill="#1c75bc" stroke="#231f20" stroke-miterlimit="10" stroke-width="30"/>
+    <line x1="768.32" y1="125.32" x2="768.32" y2="638.94" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="30"/>
+    <line x1="511.51" y1="382.13" x2="1025.12" y2="382.13" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="30"/>
+  </g>
+  <g id="WAT9S">
+    <rect id="neck" x="1202.7" y="809.3" width="145.61" height="91.91" fill="#939598"/>
+    <g id="head">
+      <circle id="_head" cx="1276.78" cy="548.76" r="283.72" fill="#939598"/>
+      <g id="eyes">
+        <g id="left_eye">
+          <g id="left_dead_eye">
+            <line id="ldy2" x1="1097.43" y1="420.88" x2="1209.38" y2="532.83" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10"/>
+            <line id="ldy1" x1="1209.38" y1="420.88" x2="1097.43" y2="532.83" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10"/>
+          </g>
+          <circle id="left_eyeball" cx="1153.41" cy="476.86" r="79.6" fill="#53ddf4"/>
+          <circle id="left_pupil" cx="1153.41" cy="476.86" r="29.11" fill="#020202"/>
+        </g>
+        <g id="right_eye">
+          <g id="right_dead_eye">
+            <line id="ldy2-2" data-name="ldy2" x1="1335.92" y1="416.8" x2="1447.87" y2="528.74" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10"/>
+            <line id="ldy1-2" data-name="ldy1" x1="1447.87" y1="416.8" x2="1335.92" y2="528.74" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10"/>
+          </g>
+          <circle id="right_eyeball" cx="1391.9" cy="472.77" r="79.6" fill="#53ddf4"/>
+          <circle id="right_pupil" cx="1391.9" cy="472.77" r="29.11" fill="#020202"/>
+        </g>
+      </g>
+      <g id="antennas">
+        <polyline id="electric_current" points="1031.31 168.96 1113.15 97.99 1194.4 168.45 1275.36 98.24 1356.1 168.27 1436.76 98.31 1519.69 170.24" fill="none"/>
+        <rect id="right_antenna" x="1365.9" y="210.69" width="225.7" height="56.17" transform="translate(536.44 1404.26) rotate(-60)" fill="#939598"/>
+        <rect id="left_antenna" x="957.11" y="210.69" width="225.7" height="56.17" transform="translate(1402 1289.01) rotate(-120)" fill="#939598"/>
+      </g>
+      <line id="mouth" x1="1153.41" y1="678.58" x2="1391.9" y2="678.58" fill="#231f20" stroke="#231f20" stroke-miterlimit="10" stroke-width="8"/>
+    </g>
+    <rect id="body" x="930.52" y="868.54" width="684.26" height="467.74" fill="#939598"/>
+    <g id="left_arm_group">
+      <rect id="left_arm" x="812.88" y="868.54" width="50.82" height="385.65" fill="#939598"/>
+      <g id="left_hand_group">
+        <circle id="left_hand" cx="838.29" cy="1271.94" r="64.34" fill="#939598"/>
+        <polygon id="left_spikes" points="706.32 1298.24 808.9 1270.63 726.85 1210.13 829.35 1254.19 829.35 1175.94 853.61 1257.48 931.84 1199.61 892.82 1265.37 948.29 1262.74 856.24 1286.41 931.84 1325.86 843.09 1310.08 829.35 1367.94 811.53 1298.24 706.32 1298.24" fill="none"/>
+      </g>
+    </g>
+    <g id="right_arm_group">
+      <g id="right_hand_group">
+        <circle id="right_hand" cx="1707.01" cy="1271.94" r="64.34" fill="#939598"/>
+        <polygon id="right_spikes" points="1680.71 1142.86 1708.33 1245.43 1768.82 1163.39 1724.77 1265.88 1803.01 1265.88 1721.48 1290.14 1779.34 1368.38 1713.59 1329.36 1716.22 1384.83 1692.55 1292.78 1653.09 1368.38 1668.88 1279.63 1611.01 1265.88 1680.71 1248.06 1680.71 1142.86" fill="none"/>
+      </g>
+      <rect id="right_arm" x="1681.6" y="868.54" width="50.82" height="385.65" fill="#939598"/>
+    </g>
+    <rect id="arms_conector" x="851.57" y="888.96" width="845.62" height="12.26" fill="#939598"/>
+    <g id="wheel">
+      <polyline points="1276.78 1396.82 1276.78 1664.11 1465.72 1475.17" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="20"/>
+      <polyline points="1544.08 1664.11 1276.78 1664.11 1465.7 1853.03" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="20"/>
+      <g>
+        <circle cx="1276.78" cy="1664.11" r="267.3" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="20"/>
+        <path d="M1272.93,1927.18v-267.3l-185.28,185.29" transform="translate(3.85 4.23)" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="20"/>
+        <polyline points="1009.48 1664.11 1276.78 1664.11 1087.81 1475.14" fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="20"/>
+      </g>
+    </g>
+    <g id="wheel_cover" opacity="0.8">
+      <path d="M1272.93,1363.71c-161,0-296.48,109.66-335.72,258.38h671.44C1569.42,1473.37,1434,1363.71,1272.93,1363.71Z" transform="translate(3.85 4.23)" fill="#6d6e71" stroke="#808285" stroke-miterlimit="10" stroke-width="20"/>
+    </g>
+    <g id="clothes">
+      <polygon id="tuxedo" points="1614.78 1301.56 930.52 1301.56 930.52 895.09 1153.41 895.09 1401.02 895.09 1614.78 895.09 1614.78 1301.56" fill="#3e3e3e"/>
+      <polygon id="undershirt" points="1153.41 895.09 1272.65 1107.52 1391.9 895.09 1153.41 895.09" fill="#fff"/>
+      <polygon id="badge" points="1458.26 1113.64 1433.91 1071.48 1458.26 1029.31 1506.95 1029.31 1531.29 1071.48 1506.95 1113.64 1458.26 1113.64" fill="#ffeb35"/>
+    </g>
+    <rect id="wheel_conector" x="1202.91" y="1336.28" width="139.48" height="48.55" fill="#939598"/>
+  </g>
+</svg>

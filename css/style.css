@@ -1,0 +1,59 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  background: whitesmoke;
+}
+
+#characterObj{
+  border: 1px solid #eee;
+  width: 100%;
+}
+
+main {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(30em, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 2em 20% 0 20%;
+  gap: 0.5em;
+  /* display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 1em; */
+}
+#characterContainer{
+  grid-column-end: -3;
+  grid-column-start: 1;
+}
+#characterContainer, #controls {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#controls{
+  max-width: 20em;
+  grid-column-start: -3;
+  flex-direction: column;
+  place-items: center;
+  grid-column-end: -1;
+}
+
+button {
+  height: 3rem;
+  width: 100%;
+  margin: 0.4em;
+  color: #eee;
+  background-color: #54bd84;
+  font-size: 1.5rem;
+}
+
+button:hover {
+  cursor:pointer;
+  background-color: #049c49;
+}
+
+/* ******* Character SVG Layers ******* */
+#l-fang, #r-fang, #l-X, #r-X {
+  opacity: 0
+}
