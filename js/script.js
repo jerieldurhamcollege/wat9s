@@ -14,6 +14,7 @@ window.onload = function(){
 
     let neutralIndex = 0;
     let happyIndex = 1;
+    let angryIndex =2;
 
 
     // ! MAKE SURE contentDocument is declared for your parent 
@@ -31,15 +32,20 @@ window.onload = function(){
     let leftArm = characterObj.getElementById('left_arm_group');
     let rightArm = characterObj.getElementById('right_arm_group');
     let lightningBolt = characterObj.getElementById('electric_current');
-
+    let mouth = characterObj.getElementById('mouth');
+    let happyMouth = characterObj.getElementById('happy_mouth');
+    let leftSpikes = characterObj.getElementById('left_spikes');
+    let rightSpikes = characterObj.getElementById('right_spikes');
     // * target buttons to trigger function
     let neutralBtn = document.getElementById('neutral');
     let happyBtn = document.getElementById('happy');
     let deadBtn = document.getElementById('dead');
+    let angryBtn = document.getElementById('angry');
 
     // // ! EXAMPLE OF TARGETTING MULTIPLE SELECTORS NOTE THAT WE CAN STORE
     // // ! VARIABLES INTO AN ARRAY AND TARGET THE ARRAY IN GSAP3!!!
     let pupils = [leftPupil, rightPupil];
+    let eyes = [leftEyeball, rightEyeball];
     // let previousEyes = [lPupil, rPupil];
     // let deadEyes = [lDeadEye, rDeadEye];
     // let rotateReset = [lEar,rEar, lWhisker, rWhisker]; // Contains all layers that we want to reset rotation to 0
@@ -62,6 +68,11 @@ window.onload = function(){
     happyBtn.addEventListener('click', function() {
         console.log("Happy");
         happy();
+    });
+
+    angryBtn.addEventListener('click', function() {
+        console.log("angry");
+        angry();
     });
     
 
@@ -86,6 +97,12 @@ window.onload = function(){
         //
         animations[neutralIndex][0] = gsap.set(pupils,{
             xPercent:0,
+        });
+        animations[angryIndex][3] = gsap.set([leftSpikes, rightSpikes],{
+            fill: 'transparent',
+        });
+        animations[angryIndex][4] = gsap.set(lightningBolt,{
+            stroke: 'transparent',
         });
     }
 
@@ -132,6 +149,7 @@ window.onload = function(){
         //Lightning bolt
         animations[neutralIndex][4] = gsap.timeline({repeat: -1, yoyo: true})
         .fromTo(lightningBolt, 1, {
+            stroke: 'blue',
             scaleY: 0,
             opacity: 1,
             autoRound: false,
@@ -176,7 +194,6 @@ window.onload = function(){
             fill: 'yellow',
             duration: 0.5
         });
-        gsap.to(wheel, {morphSVG: "#mouth", duration: 1}, "+=1");
 
         animations[neutralIndex][3] = gsap.timeline({repeat: -1, yoyo: false})
         .to(wheel, {
@@ -200,11 +217,83 @@ window.onload = function(){
         .to(character, {
             xPercent: -20,
             duration: 1
+        });
+        animations[happyIndex][5] = gsap.to(happyMouth,{
+            fill: 'black',
+            duration:0.2
+        });
+    }
+
+    function angry() {
+        reset();
+        animations[angryIndex][1] = gsap.fromTo([pupils, mouth],{
+            stroke: 'black',
+            fill: 'black'
+        },{
+            fill: 'red',
+            stroke: 'red',
+        });
+        animations[angryIndex][2] = gsap.to(eyes,{
+            fill: 'black'
+        },{
+            fill: 'red'
+        });
+        animations[angryIndex][3] = gsap.to(mouth,{
+            strokeWidth: 40
+        });
+        animations[angryIndex][4] = gsap.fromTo(leftSpikes,{
+            transformOrigin: "50% 50%",
+            duration: 1,
+            fill: '#939598',
+        }, {
+            rotation: "300",
+            scale: 1.5,
+            ease: "none",
+            repeat: -1
         })
+        animations[angryIndex][5] = gsap.fromTo(rightSpikes,{
+            transformOrigin: "50% 50%",
+            duration: 1,
+            fill: '#939598',
+        }, {
+            rotation: "-300",
+            scale: 1.5,
+            ease: "none",
+            repeat: -1
+        });
+        //Lightning bolt
+        animations[angryIndex][6] = gsap.timeline({repeat: -1, yoyo: true})
+        .fromTo(lightningBolt, 1, {
+        scaleY: 0,
+        stroke: 'red',
+        opacity: 1,
+        autoRound: false,
+        },{
+        scaleY: 1,
+        stroke: 'red',
+        filter: "blur(8px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
+        });
+
+        animations[angryIndex][7] = gsap.timeline({repeat: -1, yoyo: false})
+        .to(wheel, {
+            rotation: "1000",
+            transformOrigin: "50% 50%",
+            duration: 1.5,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(wheel, {
+            rotation: "-500",
+            transformOrigin: "50% 50%",
+            duration: 1.5,
+            ease: "none" //no easing because it is a continuous loop
+        });
     }
 
     function dead(){
-    
+        animations[angryIndex][1] = gsap.to(happyMouth,{
+            fill: 'black',
+            duration:0.2
+        });
     }
 }
 

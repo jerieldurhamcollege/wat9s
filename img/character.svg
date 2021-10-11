@@ -18,8 +18,8 @@
 	.st12{fill:#53DDF4;}
 	.st13{fill:#020202;}
 	.st14{opacity:0;fill:none;stroke:#0034E9;stroke-width:20;stroke-miterlimit:10;}
-	.st15{fill:none;stroke:#231F20;stroke-width:8;stroke-miterlimit:10;}
-	.st16{fill:none;}
+	.st15{fill:none;}
+	.st16{fill:none;stroke:#231F20;stroke-width:8;stroke-miterlimit:10;}
 	.st17{fill:none;stroke:#231F20;stroke-width:20;stroke-miterlimit:10;}
 	.st18{opacity:0.8;}
 	.st19{fill:#6D6E71;stroke:#808285;stroke-width:20;stroke-miterlimit:10;}
@@ -140,24 +140,25 @@
 			
 				<rect id="left_antenna" x="1045.7" y="130.2" transform="matrix(0.866 -0.5 0.5 0.866 22.3576 569.4598)" class="st10" width="56.2" height="225.7"/>
 		</g>
-		<line id="mouth" class="st15" x1="1153.4" y1="678.6" x2="1391.9" y2="678.6"/>
+		<path id="happy_mouth" class="st15" d="M1150.4,670.7c0,35.6,53.4,64.5,119.2,64.5s119.2-28.9,119.2-64.5H1150.4z"/>
+		<line id="mouth" class="st16" x1="1153.4" y1="678.6" x2="1391.9" y2="678.6"/>
 	</g>
 	<rect id="body" x="930.5" y="868.5" class="st10" width="684.3" height="467.7"/>
 	<g id="left_arm_group">
 		<circle id="right_shoulder_00000137123861571602729140000006942797329609787550_" class="st10" cx="838.3" cy="889" r="64.3"/>
 		<rect id="left_arm" x="812.9" y="868.5" class="st10" width="50.8" height="385.6"/>
 		<g id="left_hand_group">
-			<circle id="left_hand" class="st10" cx="838.3" cy="1271.9" r="64.3"/>
-			<polygon id="left_spikes" class="st16" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
+			<polygon id="left_spikes" class="st15" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
 				931.8,1199.6 892.8,1265.4 948.3,1262.7 856.2,1286.4 931.8,1325.9 843.1,1310.1 829.3,1367.9 811.5,1298.2 			"/>
+			<circle id="left_hand" class="st10" cx="838.3" cy="1271.9" r="64.3"/>
 		</g>
 	</g>
 	<g id="right_arm_group">
 		<g id="right_hand_group">
-			<circle id="right_hand" class="st10" cx="1707" cy="1271.9" r="64.3"/>
-			<polygon id="right_spikes" class="st16" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
+			<polygon id="right_spikes" class="st15" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
 				1721.5,1290.1 1779.3,1368.4 1713.6,1329.4 1716.2,1384.8 1692.6,1292.8 1653.1,1368.4 1668.9,1279.6 1611,1265.9 1680.7,1248.1 
 							"/>
+			<circle id="right_hand" class="st10" cx="1707" cy="1271.9" r="64.3"/>
 		</g>
 		<circle id="right_shoulder" class="st10" cx="1707" cy="889" r="64.3"/>
 		<rect id="right_arm" x="1681.6" y="868.5" class="st10" width="50.8" height="385.6"/>
