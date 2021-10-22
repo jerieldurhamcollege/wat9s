@@ -1,17 +1,11 @@
 window.onload = function(){
+    //Audio
+    let audio = [new Audio('../audio/chainsaw.mp3'), new Audio('../audio/droplet.wav'), new Audio('../audio/cheerful.mp3'), 
+                    new Audio('../audio/heartbeat.wav'), new Audio('../audio/metal_falling.mp3'), new Audio('../audio/metal_impact.mp3'),
+                    new Audio('../audio/metals_falling.wav'), new Audio('../audio/electricity.wav')];
     //Animation arrays
     let animations = Array.from(Array(6), () => new Array()) //Two dimensional array with 6 elements. 
-// #TODO
-    // let animations = {
-    //     neutral : [],
-    //     sad : [],
-    //     happy : [],
-    //     angry : [],
-    //     sick : [],
-    //     dead : []
-    // };
-    //let animations = Array.from(['neutral', 'sad', 'angry', 'happy', 'sick', 'dead'], () => new Array()) //Two dimensional array with 6 elements. 
-    // Refer to the SVG object in the DOM 
+    let _gsapDelayedCall = [];
     let currentAnimation = '';
     let neutralIndex = 0;
     let happyIndex = 1;
@@ -88,12 +82,12 @@ window.onload = function(){
 
     //  * Add event listener and run function when we click
     neutralBtn.addEventListener('click', function() {
-        currentAnimation = 'Neutral';
+        currentAnimation = 'neutral';
         neutral();
     });
 
     happyBtn.addEventListener('click', function() {
-        currentAnimation = 'Happy';
+        currentAnimation = 'happy';
         happy();
     });
 
@@ -117,6 +111,13 @@ window.onload = function(){
 
     // **************** ANIMATION FUNCTIONS ****************
     let reset = function (){
+        //Kill all delayed calls 
+        for (let i = 0; i < _gsapDelayedCall; i++) {
+            if(_gsapDelayedCall[i]){
+                console.log(_gsapDelayedCall[i]);
+                _gsapDelayedCall[i].kill();
+            }
+        }
         for (const state in animations) {
             for(anim in animations[state]){
                 if(animations[state][anim]){
@@ -125,6 +126,11 @@ window.onload = function(){
                     animations[state][anim] = null; //destroy
                 }
             };
+        }
+        //Pause all audios
+        for (let i = 0; i < audio.length; i++) {
+            audio[i].pause();
+            audio[i].currentTime = 0;
         }
         //
         animations[neutralIndex][0] = gsap.set(pupils,{
@@ -146,10 +152,23 @@ window.onload = function(){
         animations[deadIndex][3] = gsap.set(previousEyes, {
             opacity: 1
         });
-        animations[deadIndex][9] = gsap.set([body, battery, arms_conector, neck], {
+        animations[deadIndex][9] = gsap.set([head, leftArm, rightArm, body, battery, arms_conector, neck], {
             yPercent: 0,
+            xPercent: 0,
             rotation: "0"
         });
+        //This actually works...
+        // characterObj.data = 'img/character.svg';
+    }
+
+    //For sounds that only play once.
+    let playSound = function (sound, interval, condition) {
+        if (condition == currentAnimation){
+            sound.play();
+            _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(interval, ()=>{
+                playSound(sound, interval, condition);
+            })
+        }
     }
 
     function neutral(){
@@ -208,6 +227,9 @@ window.onload = function(){
 
     function happy() {
         reset();
+        //Play audio
+        audio[2].play();
+        audio[2].loop = true;
 
         //Moving arm. Waving animation.
         animations[happyIndex][0] = gsap.timeline({repeat: -1, yoyo: true})
@@ -273,6 +295,8 @@ window.onload = function(){
 
     function angry() {
         reset();
+        audio[0].play();
+        audio[0].loop = true;
         animations[angryIndex][1] = gsap.fromTo([pupils, mouth],{
             stroke: 'black',
             fill: 'black'
@@ -343,7 +367,7 @@ window.onload = function(){
             opacity: 0,
             duration: 1,
             fill: '#414245',
-            filter: "blur(8px)"
+            filter: "blur(12px)"
         }, {
             xPercent: -10,
             yPercent: -50,
@@ -355,6 +379,7 @@ window.onload = function(){
 
     function sad(){
         reset();
+        playSound(audio[1], 1, 'sad');
         animations[sadIndex][1] = gsap.to(tears,{
             fill: '#27aae1'
         });
@@ -404,6 +429,10 @@ window.onload = function(){
     //#sick
     function sick(){
         reset();
+        //Play Audio
+        audio[3].play();
+        audio[3].loop = true;
+
         animations[sickIndex][1] =  gsap.timeline({repeat: -1, yoyo: false})
         .to(head, {
             rotation: "30",
@@ -436,7 +465,7 @@ window.onload = function(){
         animations[sickIndex][6] = gsap.to(mouth, {
             opacity: 0
         });
-        gsap.delayedCall(3, ()=>{
+        _gsapDelayedCall[_gsapDelayedCall.length]  = gsap.delayedCall(3, ()=>{
             if (currentAnimation == 'sick'){
                 animations[sickIndex][7] = gsap.timeline({yoyo: false})
                 .to(rightArm, {
@@ -445,6 +474,14 @@ window.onload = function(){
                 .to(rightArm, {
                     transformOrigin: '50% 100%',
                     rotation:"-90",
+                });
+                //Play Audio
+                _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(0.5, ()=>{
+                audio[4].play();
+                _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(0.4, ()=>{
+                    audio[5].play();
+                    });
+                    audio[5].volume= 1;
                 });
             }
         });
@@ -490,7 +527,7 @@ window.onload = function(){
             duration: 3,
             fill: 'red'
         });
-        gsap.delayedCall(3, ()=>{
+        _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(3, ()=>{
             //In case the current animation changes, only play if it is the right one.
             if (currentAnimation == 'dead'){
                 animations[deadIndex][6] = gsap.to(head, {
@@ -516,12 +553,6 @@ window.onload = function(){
                     transformOrigin: '50% 100%',
                     duration: 1.5
                 });
-                animations[deadIndex][9] = gsap.to(battery, {
-                    yPercent: 110,
-                    rotation: "-10",
-                    transformOrigin: '50% 100%',
-                    duration: 1.5
-                });
                 animations[deadIndex][10] = gsap.to(body, {
                     yPercent: 130,
                     rotation: "-10",
@@ -536,6 +567,15 @@ window.onload = function(){
                     yPercent: 350,
                     rotation: "0",
                     duration: 1.3
+                });
+                //Play Audio
+                audio[5].play();
+                audio[4].play();
+                audio[6].play();
+                _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(1.3, ()=>{
+                    if (currentAnimation == 'dead'){
+                        playSound(audio[7], 0.7, 'dead');
+                    }
                 });
             }
         });
