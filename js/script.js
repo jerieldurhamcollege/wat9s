@@ -1,6 +1,7 @@
 window.onload = function(){
     //Animation arrays
     let animations = Array.from(Array(6), () => new Array()) //Two dimensional array with 6 elements. 
+// #TODO
     // let animations = {
     //     neutral : [],
     //     sad : [],
@@ -11,23 +12,28 @@ window.onload = function(){
     // };
     //let animations = Array.from(['neutral', 'sad', 'angry', 'happy', 'sick', 'dead'], () => new Array()) //Two dimensional array with 6 elements. 
     // Refer to the SVG object in the DOM 
-
+    let currentAnimation = '';
     let neutralIndex = 0;
     let happyIndex = 1;
     let angryIndex =2;
+    let sadIndex = 3;
+    let sickIndex = 4;
+    let deadIndex = 5;
 
-
-    // ! MAKE SURE contentDocument is declared for your parent 
     let characterObj = document.getElementById('characterObj').contentDocument
 
-    // * refers to the parent layer (characterObj) of our SVG
     let character = characterObj.getElementById('WAT9S');
+    let arms_conector = characterObj.getElementById('arms_conector');
+    let body = characterObj.getElementById('body');
+    let neck = characterObj.getElementById('neck');
     let leftEye = characterObj.getElementById('left_eye');
     let rightEye = characterObj.getElementById('right_eye');
     let leftEyeball = characterObj.getElementById('left_eyeball');
     let rightEyeball = characterObj.getElementById('right_eyeball');
     let leftPupil = characterObj.getElementById('left_pupil');
     let rightPupil = characterObj.getElementById('right_pupil');
+    let leftDeadEye = characterObj.getElementById('left_dead_eye');
+    let rightDeadEye = characterObj.getElementById('right_dead_eye');
     let wheel  = characterObj.getElementById('wheel');
     let leftArm = characterObj.getElementById('left_arm_group');
     let rightArm = characterObj.getElementById('right_arm_group');
@@ -36,18 +42,39 @@ window.onload = function(){
     let happyMouth = characterObj.getElementById('happy_mouth');
     let leftSpikes = characterObj.getElementById('left_spikes');
     let rightSpikes = characterObj.getElementById('right_spikes');
+    let left_tire_smoke_2 = characterObj.getElementById('left_x5F_smoke2');
+    let left_tire_smoke_1 = characterObj.getElementById('left_x5F_smoke1');
+    let right_tire_smoke_2 = characterObj.getElementById('right_x5F_smoke2');
+    let right_tire_smoke_1 = characterObj.getElementById('right_x5F_smoke1');
+    let tear1 = characterObj.getElementById('tear1');
+    let tear2 = characterObj.getElementById('tear2');
+    let sadMouth = characterObj.getElementById('sad_mouth');
+    let termometer_fill = characterObj.getElementById('termometer_x5F_fill');
+    let termometer_glass = characterObj.getElementById('termometer_x5F_glass');
+    let termometer_fill_bars= characterObj.querySelectorAll("#termometer_x5F_fill rect");
+    let head = characterObj.getElementById('head');
+    let clothes = characterObj.getElementById('clothes');
+    let battery = characterObj.getElementById('battery');
+    let battery_level = characterObj.getElementById('battery_x5F_level');
     // * target buttons to trigger function
     let neutralBtn = document.getElementById('neutral');
     let happyBtn = document.getElementById('happy');
     let deadBtn = document.getElementById('dead');
     let angryBtn = document.getElementById('angry');
+    let sadBtn = document.getElementById('sad');
+    let sickBtn = document.getElementById('sick');
+
 
     // // ! EXAMPLE OF TARGETTING MULTIPLE SELECTORS NOTE THAT WE CAN STORE
     // // ! VARIABLES INTO AN ARRAY AND TARGET THE ARRAY IN GSAP3!!!
     let pupils = [leftPupil, rightPupil];
     let eyes = [leftEyeball, rightEyeball];
-    // let previousEyes = [lPupil, rPupil];
-    // let deadEyes = [lDeadEye, rDeadEye];
+    let left_tire_smoke = [left_tire_smoke_1, left_tire_smoke_2];
+    let right_tire_smoke = [right_tire_smoke_1, right_tire_smoke_2];
+    let tears = [tear1, tear2];
+    let termometer = [termometer_fill, termometer_glass];
+    let previousEyes = [leftEyeball, rightEyeball, pupils];
+    let deadEyes = [leftDeadEye, rightDeadEye];
     // let rotateReset = [lEar,rEar, lWhisker, rWhisker]; // Contains all layers that we want to reset rotation to 0
 
     // **************** INTRO FADE ****************
@@ -61,29 +88,34 @@ window.onload = function(){
 
     //  * Add event listener and run function when we click
     neutralBtn.addEventListener('click', function() {
-        console.log("Neutral");
+        currentAnimation = 'Neutral';
         neutral();
     });
 
     happyBtn.addEventListener('click', function() {
-        console.log("Happy");
+        currentAnimation = 'Happy';
         happy();
     });
 
     angryBtn.addEventListener('click', function() {
-        console.log("angry");
+        currentAnimation = 'angry';
         angry();
     });
-    
 
+    sadBtn.addEventListener('click', function() {
+        currentAnimation = 'sad';
+        sad();
+    });
+    sickBtn.addEventListener('click', function() {
+        currentAnimation = 'sick';
+        sick();
+    });
+    deadBtn.addEventListener('click', function() {
+        currentAnimation = 'dead';
+        dead();
+    });
 
     // **************** ANIMATION FUNCTIONS ****************
-    // function transformOriginSet() {
-    //     gsap.set(lEar, {
-    //         transformOrigin: "bottom center"
-    //     });
-    // }
-
     let reset = function (){
         for (const state in animations) {
             for(anim in animations[state]){
@@ -103,6 +135,20 @@ window.onload = function(){
         });
         animations[angryIndex][4] = gsap.set(lightningBolt,{
             stroke: 'transparent',
+            strokeOpacity: 0
+        });
+        animations[sickIndex][4] =  gsap.set(termometer_fill_bars,{
+            fill: 'transparent'
+        });
+        animations[deadIndex][3] = gsap.set(pupils, {
+            yPercent: 0
+        });
+        animations[deadIndex][3] = gsap.set(previousEyes, {
+            opacity: 1
+        });
+        animations[deadIndex][9] = gsap.set([body, battery, arms_conector, neck], {
+            yPercent: 0,
+            rotation: "0"
         });
     }
 
@@ -154,6 +200,7 @@ window.onload = function(){
             opacity: 1,
             autoRound: false,
         },{
+            strokeOpacity: 1,
             scaleY: 1,
             filter: "blur(8px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
         });
@@ -271,6 +318,7 @@ window.onload = function(){
         },{
         scaleY: 1,
         stroke: 'red',
+        strokeOpacity: 1,
         filter: "blur(8px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
         });
 
@@ -287,12 +335,222 @@ window.onload = function(){
             duration: 1.5,
             ease: "none" //no easing because it is a continuous loop
         });
+
+        animations[angryIndex][8]= gsap.timeline({repeat: -1, yoyo: false})
+        .fromTo([right_tire_smoke, left_tire_smoke], {
+            xPercent: +10,
+            yPercent: +10,
+            opacity: 0,
+            duration: 1,
+            fill: '#414245',
+            filter: "blur(8px)"
+        }, {
+            xPercent: -10,
+            yPercent: -50,
+            duration: 2,
+            opacity: 1,
+            fill: '#333436'
+        });
+    }
+
+    function sad(){
+        reset();
+        animations[sadIndex][1] = gsap.to(tears,{
+            fill: '#27aae1'
+        });
+        animations[sadIndex][2] = gsap.timeline({repeat: -1, yoyo: false})
+        .to(tear1,{
+            yPercent: 300,
+            opacity: 0,
+            duration: 1
+        })
+        .to(tear2,{
+            yPercent: 300,
+            opacity: 0,
+            duration: 1
+        });
+        animations[sadIndex][3] = gsap.to(mouth, {
+            opacity: 0
+        });
+        animations[sadIndex][4] = gsap.to(sadMouth, {
+            fill: 'black'
+        });
+        animations[sadIndex][5] = gsap.timeline({repeat: -1, yoyo: true})
+        .set([rightArm, leftArm], {
+            rotation: "-10",
+            transformOrigin: "50% 10%",
+        })
+        .to([rightArm, leftArm], {
+            rotation: "10", //Even if it is a timeline, this seems to start from the initial position and not the current location set by the first step on this sequence.
+            transformOrigin: "50% 10%",
+            duration: 1.5
+        });
+        animations[sadIndex][6] = gsap.timeline({repeat: -1, yoyo: true})
+        .to(wheel, {
+            scale: 0.9,
+            transformOrigin: '50%, 0%',
+            duration: 1.5,
+        })
+        .to(wheel, {
+            scale: 1,
+            transformOrigin: '50%, 0%',
+            duration: 0.5,
+        });
+        animations[sadIndex][7] = gsap.to(pupils,{
+            yPercent:90,
+        });
+        
+    }
+    //#sick
+    function sick(){
+        reset();
+        animations[sickIndex][1] =  gsap.timeline({repeat: -1, yoyo: false})
+        .to(head, {
+            rotation: "30",
+            transformOrigin: "50% 100%",
+            duration: 1.5,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(head, {
+            rotation: "-30",
+            transformOrigin: "50% 100%",
+            duration: 1.5,
+            ease: "none" //no easing because it is a continuous loop
+        });
+        animations[sickIndex][2] =  gsap.to(eyes, {
+            duration: 1,
+            fill: 'green',
+        });
+        animations[sickIndex][3] =  gsap.to(termometer_glass,{
+            fill: 'white'
+        });
+        animations[sickIndex][4] =  gsap.to(termometer_fill_bars,{
+            fill: 'red',
+            stagger: 0.3,
+            repeat: -1,
+            duration:1.5
+        });
+        animations[sickIndex][5] = gsap.to(sadMouth, {
+            fill: 'black'
+        });
+        animations[sickIndex][6] = gsap.to(mouth, {
+            opacity: 0
+        });
+        gsap.delayedCall(3, ()=>{
+            if (currentAnimation == 'sick'){
+                animations[sickIndex][7] = gsap.timeline({yoyo: false})
+                .to(rightArm, {
+                    yPercent: 100
+                })
+                .to(rightArm, {
+                    transformOrigin: '50% 100%',
+                    rotation:"-90",
+                });
+            }
+        });
+        animations[sadIndex][8] = gsap.to(pupils,{
+            scale: 0.8,
+            yoyo: true,
+            repeat: -1
+        });
     }
 
     function dead(){
-        animations[angryIndex][1] = gsap.to(happyMouth,{
+        reset();
+        animations[deadIndex][1] = gsap.to(sadMouth,{
             fill: 'black',
-            duration:0.2
+            duration: 0.2
+        });
+        animations[deadIndex][2] = gsap.to(mouth, {
+            opacity: 0
+        });
+        animations[deadIndex][3] = gsap.timeline({yoyo: false})
+        .to(pupils,{
+            yPercent: 90,
+            duration: 1.5
+        })
+        .to(previousEyes, {
+            opacity: 0,
+            duration: 1
+        })
+        .to(deadEyes, {
+            opacity: 1,
+            fill: 'black',
+            duration: 1
+        });
+        animations[deadIndex][4] = gsap.to(clothes, {
+            yPercent: 120,
+            opacity: 0,
+            duration: 1
+        });
+        animations[deadIndex][5] = gsap.fromTo(battery_level, {
+            scaleX: 5,
+        }, {
+            scaleX: 0,
+            duration: 3,
+            fill: 'red'
+        });
+        gsap.delayedCall(3, ()=>{
+            //In case the current animation changes, only play if it is the right one.
+            if (currentAnimation == 'dead'){
+                animations[deadIndex][6] = gsap.to(head, {
+                    yPercent: 125,
+                    rotation: "40",
+                    duration: 1
+                });
+                animations[deadIndex][7] = gsap.to(leftArm, {
+                    yPercent: 90,
+                    rotation: "80",
+                    transformOrigin: '50% 100%',
+                    duration: 1
+                });
+                animations[deadIndex][8] = gsap.to(rightArm, {
+                    yPercent: 110,
+                    rotation: "-60",
+                    transformOrigin: '50% 100%',
+                    duration: 2
+                });
+                animations[deadIndex][9] = gsap.to(battery, {
+                    yPercent: 110,
+                    rotation: "-10",
+                    transformOrigin: '50% 100%',
+                    duration: 1.5
+                });
+                animations[deadIndex][9] = gsap.to(battery, {
+                    yPercent: 110,
+                    rotation: "-10",
+                    transformOrigin: '50% 100%',
+                    duration: 1.5
+                });
+                animations[deadIndex][10] = gsap.to(body, {
+                    yPercent: 130,
+                    rotation: "-10",
+                    duration: 1.2
+                });
+                animations[deadIndex][11] = gsap.to(arms_conector, {
+                    yPercent: 10050,
+                    rotation: "-60",
+                    duration: 1.3
+                });
+                animations[deadIndex][12] = gsap.to(neck, {
+                    yPercent: 350,
+                    rotation: "0",
+                    duration: 1.3
+                });
+            }
+        });
+        animations[deadIndex][13] = gsap.timeline({repeat: -1, yoyo: true})
+        .fromTo(lightningBolt, 1, {
+        scaleY: 0,
+        stroke: 'red',
+        opacity: 1,
+        autoRound: false,
+        },{
+        scaleY: 1,
+        stroke: 'red',
+        strokeOpacity: 1,
+        duration: 3,
+        filter: "blur(12px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
         });
     }
 }

@@ -1,9 +1,14 @@
 * {
   margin: 0px;
   padding: 0px;
-  background: whitesmoke;
 }
 
+#nav {
+  background: #262262;
+  color: #eee;
+  padding: 0.3em;
+  font-size: 1.5em;
+}
 #characterObj{
   border: 1px solid #eee;
   width: 100%;

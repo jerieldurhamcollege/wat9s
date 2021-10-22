@@ -17,15 +17,17 @@
 	.st11{fill:none;stroke:#231F20;stroke-width:10;stroke-miterlimit:10;}
 	.st12{fill:#53DDF4;}
 	.st13{fill:#020202;}
-	.st14{opacity:0;fill:none;stroke:#0034E9;stroke-width:20;stroke-miterlimit:10;}
+	.st14{fill:none;stroke:#0034E9;stroke-width:20;stroke-miterlimit:10;stroke-opacity:0;}
 	.st15{fill:none;}
 	.st16{fill:none;stroke:#231F20;stroke-width:8;stroke-miterlimit:10;}
 	.st17{fill:none;stroke:#231F20;stroke-width:20;stroke-miterlimit:10;}
 	.st18{opacity:0.8;}
 	.st19{fill:#6D6E71;stroke:#808285;stroke-width:20;stroke-miterlimit:10;}
-	.st20{fill:#3E3E3E;}
-	.st21{fill:#FFFFFF;}
-	.st22{fill:#FFEB35;}
+	.st20{fill:#231F20;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st21{fill:#37B34A;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st22{fill:#3E3E3E;}
+	.st23{fill:#FFFFFF;}
+	.st24{fill:#FFEB35;}
 </style>
 <g id="Background">
 	<rect x="22.3" y="15" class="st0" width="2649.1" height="792.5"/>
@@ -111,7 +113,69 @@
 	<line class="st9" x1="511.5" y1="382.1" x2="1025.1" y2="382.1"/>
 </g>
 <g id="WAT9S">
-	<rect id="neck" x="1202.7" y="809.3" class="st10" width="145.6" height="91.9"/>
+	<rect id="body" x="930.5" y="868.5" class="st10" width="684.3" height="467.7"/>
+	<rect id="arms_conector" x="851.6" y="889" class="st10" width="845.6" height="12.3"/>
+	<g id="wheel">
+		<polyline class="st17" points="1276.8,1396.8 1276.8,1664.1 1465.7,1475.2 		"/>
+		<polyline class="st17" points="1544.1,1664.1 1276.8,1664.1 1465.7,1853 		"/>
+		<g>
+			<circle class="st17" cx="1276.8" cy="1664.1" r="267.3"/>
+			<path class="st17" d="M1276.8,1931.4v-267.3l-185.3,185.3"/>
+			<polyline class="st17" points="1009.5,1664.1 1276.8,1664.1 1087.8,1475.1 			"/>
+		</g>
+	</g>
+	<g id="wheel_cover" class="st18">
+		<path class="st19" d="M1276.8,1367.9c-161,0-296.5,109.7-335.7,258.4h671.4C1573.3,1477.6,1437.8,1367.9,1276.8,1367.9z"/>
+	</g>
+	<g id="battery">
+		<rect id="battery_x5F_cell" x="937.6" y="909.1" class="st20" width="664.6" height="370.3"/>
+		<rect id="battery_x5F_level" x="937.6" y="909.1" class="st21" width="125.7" height="370.3"/>
+	</g>
+	<g id="clothes">
+		<polygon id="tuxedo" class="st22" points="1614.8,1301.6 930.5,1301.6 930.5,895.1 1153.4,895.1 1401,895.1 1614.8,895.1 		"/>
+		<polygon id="undershirt" class="st23" points="1153.4,895.1 1272.7,1107.5 1391.9,895.1 		"/>
+		<polygon id="badge" class="st24" points="1458.3,1113.6 1433.9,1071.5 1458.3,1029.3 1506.9,1029.3 1531.3,1071.5 1506.9,1113.6 
+					"/>
+	</g>
+	<rect id="wheel_conector" x="1202.9" y="1336.3" class="st10" width="139.5" height="48.6"/>
+	<g id="left_arm_group">
+		<circle id="right_shoulder_00000137123861571602729140000006942797329609787550_" class="st10" cx="838.3" cy="889" r="64.3"/>
+		<rect id="left_arm" x="812.9" y="868.5" class="st10" width="50.8" height="385.6"/>
+		<g id="left_hand_group">
+			<polygon id="left_spikes" class="st15" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
+				931.8,1199.6 892.8,1265.4 948.3,1262.7 856.2,1286.4 931.8,1325.9 843.1,1310.1 829.3,1367.9 811.5,1298.2 			"/>
+			<circle id="left_hand" class="st10" cx="838.3" cy="1271.9" r="64.3"/>
+		</g>
+	</g>
+	<g id="right_arm_group">
+		<g id="right_hand_group">
+			<polygon id="right_spikes" class="st15" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
+				1721.5,1290.1 1779.3,1368.4 1713.6,1329.4 1716.2,1384.8 1692.6,1292.8 1653.1,1368.4 1668.9,1279.6 1611,1265.9 1680.7,1248.1 
+							"/>
+			<circle id="right_hand" class="st10" cx="1707" cy="1271.9" r="64.3"/>
+		</g>
+		<circle id="right_shoulder" class="st10" cx="1707" cy="889" r="64.3"/>
+		<rect id="right_arm" x="1681.6" y="868.5" class="st10" width="50.8" height="385.6"/>
+	</g>
+	<g id="smoke">
+		<g id="left_x5F_smoke">
+			<path id="left_x5F_smoke2" class="st15" d="M967.3,1841.3c-0.4,1.3-24.9-4.6-50.6-19.8c-33.1-19.6-46.4-41.7-50.2-48.2
+				c-1.6-2.8-2.6-4.9-3.7-7c-18.8-38.2-19-68.5-31.5-108.9c-9.8-31.6-16.1-52.1-30.6-55.8c-15.2-3.9-34.7,11.8-42.1,29.8
+				c-15,36.5,19.2,83.3,30,98C854.9,1819.5,968.2,1838.5,967.3,1841.3z"/>
+			<path id="left_x5F_smoke1" class="st15" d="M1026.9,1940.3c0.2,1.4-24.4,6.7-54.2,4.1c-38.3-3.3-59.9-17.3-66.2-21.6
+				c-2.6-1.8-4.4-3.2-6.4-4.7c-33.6-26.3-46.9-53.4-75.7-84.4c-22.5-24.2-37.1-39.9-51.8-37c-15.4,3.1-26.1,25.7-25,45.1
+				c2.3,39.4,53.5,66.6,69.6,75.2C916.1,1969.6,1026.5,1937.4,1026.9,1940.3z"/>
+		</g>
+		<g id="right_x5F_smoke">
+			<path id="right_x5F_smoke2" class="st15" d="M1598.8,1825.1c0.4,1.3,23.5-4.6,47.8-19.8c31.2-19.6,43.8-41.7,47.3-48.2
+				c1.5-2.8,2.4-4.9,3.5-7c17.7-38.2,18-68.5,29.7-108.9c9.2-31.6,15.2-52.1,28.9-55.8c14.4-3.9,32.7,11.8,39.7,29.8
+				c14.2,36.5-18.1,83.3-28.3,98C1704.9,1803.3,1598,1822.3,1598.8,1825.1z"/>
+			<path id="right_x5F_smoke1" class="st15" d="M1542.7,1931.1c-0.2,1.4,23,6.7,51.1,4.1c36.1-3.3,56.5-17.3,62.4-21.6
+				c2.5-1.8,4.2-3.2,6-4.7c31.7-26.3,44.2-53.4,71.4-84.4c21.2-24.2,35-39.9,48.9-37c14.5,3.1,24.6,25.7,23.5,45.1
+				c-2.2,39.4-50.5,66.6-65.7,75.2C1647.1,1960.4,1543.1,1928.2,1542.7,1931.1z"/>
+		</g>
+	</g>
+		<rect id="neck" x="1202.7" y="632.5" class="st10" width="145.6" height="268.7"/>
 	<g id="head">
 		<circle id="_head" class="st10" cx="1276.8" cy="548.8" r="283.7"/>
 		<g id="eyes">
@@ -133,55 +197,52 @@
 			</g>
 		</g>
 		<g id="antennas">
-			<polyline id="electric_current" class="st14" points="1031.3,169 1113.2,98 1194.4,168.4 1275.4,98.2 1356.1,168.3 1436.8,98.3 
-				1519.7,170.2 			"/>
+			<polyline id="electric_current" class="st14" points="1031.3,196 1113.2,125 1194.4,195.4 1275.4,125.2 1356.1,195.3 
+				1436.8,125.3 1519.7,197.2 			"/>
 			
-				<rect id="right_antenna" x="1369.8" y="214.9" transform="matrix(0.5 -0.866 0.866 0.5 530.8452 1405.4757)" class="st10" width="225.7" height="56.2"/>
+				<rect id="right_antenna" x="1369.8" y="214.9" transform="matrix(0.5 -0.866 0.866 0.5 530.8552 1405.4806)" class="st10" width="225.7" height="56.2"/>
 			
-				<rect id="left_antenna" x="1045.7" y="130.2" transform="matrix(0.866 -0.5 0.5 0.866 22.3576 569.4598)" class="st10" width="56.2" height="225.7"/>
+				<rect id="left_antenna" x="1045.7" y="130.2" transform="matrix(0.866 -0.5 0.5 0.866 22.3412 569.4634)" class="st10" width="56.2" height="225.7"/>
 		</g>
 		<path id="happy_mouth" class="st15" d="M1150.4,670.7c0,35.6,53.4,64.5,119.2,64.5s119.2-28.9,119.2-64.5H1150.4z"/>
+		<path id="sad_mouth" class="st15" d="M1155.7,707.7c0-32.4,53.4-58.6,119.2-58.6s119.2,26.3,119.2,58.6H1155.7z"/>
 		<line id="mouth" class="st16" x1="1153.4" y1="678.6" x2="1391.9" y2="678.6"/>
-	</g>
-	<rect id="body" x="930.5" y="868.5" class="st10" width="684.3" height="467.7"/>
-	<g id="left_arm_group">
-		<circle id="right_shoulder_00000137123861571602729140000006942797329609787550_" class="st10" cx="838.3" cy="889" r="64.3"/>
-		<rect id="left_arm" x="812.9" y="868.5" class="st10" width="50.8" height="385.6"/>
-		<g id="left_hand_group">
-			<polygon id="left_spikes" class="st15" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
-				931.8,1199.6 892.8,1265.4 948.3,1262.7 856.2,1286.4 931.8,1325.9 843.1,1310.1 829.3,1367.9 811.5,1298.2 			"/>
-			<circle id="left_hand" class="st10" cx="838.3" cy="1271.9" r="64.3"/>
+		<g id="tears">
+			<path id="tear2" class="st15" d="M1451.4,530.9c-54.4,54.4,0,61.6,0,61.6C1503.6,540.2,1451.4,530.9,1451.4,530.9z"/>
+			<path id="tear1" class="st15" d="M1094.9,544.9c-54.4,54.4,0,61.6,0,61.6C1147.2,554.2,1094.9,544.9,1094.9,544.9z"/>
+		</g>
+		<g id="termometer">
+			<path id="termometer_x5F_glass" class="st15" d="M1541.9,556.8l-170.7,170.9c-4.1,4.1-10.6,4.1-14.7,0l-37.1-37.1
+				c-4.1-4.1-4.1-10.7,0-14.7l170.7-170.9c4.1-4.1,10.6-4.1,14.7,0l37.1,37.1C1545.9,546.1,1545.9,552.7,1541.9,556.8z"/>
+			<g id="termometer_x5F_fill">
+				
+					<rect x="1334.2" y="670.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -108.306 1154.1744)" class="st15" width="9.7" height="75.3"/>
+				<path class="st15" d="M1315.4,686.9l43.4,43.1c1.8,1.8,1.8,4.6,0,6.4l0,0c-1.8,1.8-4.6,1.8-6.4,0l-43.4-43.1
+					c-1.8-1.8-1.8-4.6,0-6.4l0,0C1310.8,685.2,1313.7,685.2,1315.4,686.9z"/>
+				
+					<rect x="1341.6" y="663.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -101.1263 1157.3119)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1347.9" y="656.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -94.541 1159.8162)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1355.3" y="649.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -87.3613 1162.9539)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1362.5" y="642.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -80.1504 1165.9165)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1369.9" y="634.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -72.9 1169.0835)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1376.7" y="627.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -65.5746 1171.7029)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1384.1" y="620.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -58.3949 1174.8405)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1390.8" y="613.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -51.5753 1177.5437)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1398.2" y="606.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -44.3956 1180.6813)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1403.9" y="600.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -38.3759 1182.9703)" class="st15" width="9.7" height="75.3"/>
+				
+					<rect x="1411.3" y="593.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -31.1962 1186.1079)" class="st15" width="9.7" height="75.3"/>
+			</g>
 		</g>
 	</g>
-	<g id="right_arm_group">
-		<g id="right_hand_group">
-			<polygon id="right_spikes" class="st15" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
-				1721.5,1290.1 1779.3,1368.4 1713.6,1329.4 1716.2,1384.8 1692.6,1292.8 1653.1,1368.4 1668.9,1279.6 1611,1265.9 1680.7,1248.1 
-							"/>
-			<circle id="right_hand" class="st10" cx="1707" cy="1271.9" r="64.3"/>
-		</g>
-		<circle id="right_shoulder" class="st10" cx="1707" cy="889" r="64.3"/>
-		<rect id="right_arm" x="1681.6" y="868.5" class="st10" width="50.8" height="385.6"/>
-	</g>
-	<rect id="arms_conector" x="851.6" y="889" class="st10" width="845.6" height="12.3"/>
-	<g id="wheel">
-		<polyline class="st17" points="1276.8,1396.8 1276.8,1664.1 1465.7,1475.2 		"/>
-		<polyline class="st17" points="1544.1,1664.1 1276.8,1664.1 1465.7,1853 		"/>
-		<g>
-			<circle class="st17" cx="1276.8" cy="1664.1" r="267.3"/>
-			<path class="st17" d="M1276.8,1931.4v-267.3l-185.3,185.3"/>
-			<polyline class="st17" points="1009.5,1664.1 1276.8,1664.1 1087.8,1475.1 			"/>
-		</g>
-	</g>
-	<g id="wheel_cover" class="st18">
-		<path class="st19" d="M1276.8,1367.9c-161,0-296.5,109.7-335.7,258.4h671.4C1573.3,1477.6,1437.8,1367.9,1276.8,1367.9z"/>
-	</g>
-	<g id="clothes">
-		<polygon id="tuxedo" class="st20" points="1614.8,1301.6 930.5,1301.6 930.5,895.1 1153.4,895.1 1401,895.1 1614.8,895.1 		"/>
-		<polygon id="undershirt" class="st21" points="1153.4,895.1 1272.7,1107.5 1391.9,895.1 		"/>
-		<polygon id="badge" class="st22" points="1458.3,1113.6 1433.9,1071.5 1458.3,1029.3 1506.9,1029.3 1531.3,1071.5 1506.9,1113.6 
-					"/>
-	</g>
-	<rect id="wheel_conector" x="1202.9" y="1336.3" class="st10" width="139.5" height="48.6"/>
 </g>
 </svg>
