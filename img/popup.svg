@@ -1,0 +1,64 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 359.44 424.87">
+  <rect id="neck" x="246.16" y="256.91" width="37.96" height="23.96" transform="translate(-169.67 94.36) rotate(-30)" fill="#929497"/>
+  <g id="head">
+    <circle id="_head" cx="154.74" cy="125.29" r="73.97" fill="#929497"/>
+    <g id="eyes">
+      <g id="left_eye">
+        <g id="left_dead_eye">
+          <line id="ldy2" x1="97.57" y1="119.8" x2="137.44" y2="130.48" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="10"/>
+          <line id="ldy1" x1="122.85" y1="105.2" x2="112.16" y2="145.07" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="10"/>
+        </g>
+        <circle id="left_eyeball" cx="117.51" cy="125.14" r="20.75" fill="#6acbe4"/>
+        <circle id="left_pupil" cx="117.51" cy="125.14" r="7.59" fill="#221f1f" stroke="#f9ec31" stroke-miterlimit="10"/>
+      </g>
+      <g id="right_eye">
+        <g id="right_dead_eye">
+          <line id="ldy2-2" data-name="ldy2" x1="150.89" y1="87.78" x2="190.76" y2="98.47" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="10"/>
+          <line id="ldy1-2" data-name="ldy1" x1="176.16" y1="73.19" x2="165.48" y2="113.06" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="10"/>
+        </g>
+        <circle id="right_eyeball" cx="170.82" cy="93.13" r="20.75" fill="#6acbe4"/>
+        <circle id="right_pupil" cx="170.82" cy="93.13" r="7.59" fill="#221f1f" stroke="#f9ec31" stroke-miterlimit="10"/>
+      </g>
+    </g>
+    <g id="antennas">
+      <polyline id="electric_current" points="49.8 71.53 59.03 44.84 86.56 50.16 95.68 23.75 123.04 29.04 132.14 2.73 160.24 8.16" fill="none"/>
+      <rect id="right_antenna" x="202.67" y="96.33" width="58.85" height="14.64" transform="translate(57.69 261.51) rotate(-90)" fill="#929497"/>
+      <rect id="left_antenna" x="110.37" y="149.62" width="58.85" height="14.64" transform="translate(111.64 288.53) rotate(-150)" fill="#929497"/>
+    </g>
+    <path d="M206,239.49c.79.54,19.5,13.09,39.42,3.82,14.72-6.85,23.79-22.67,22.51-39.58" transform="translate(-70.74 -74.23)" fill="#221f1f" stroke="#221f1f" stroke-miterlimit="10" stroke-width="8"/>
+  </g>
+  <rect id="body" x="207.52" y="264.1" width="178.4" height="121.95" transform="translate(-193.52 117.68) rotate(-30)" fill="#929497"/>
+  <g id="left_arm_group">
+    <rect id="left_arm" x="133.51" y="247.76" width="13.25" height="100.55" transform="translate(390.63 296.38) rotate(127.91)" fill="#929497"/>
+    <g id="left_hand_group">
+      <circle id="left_hand" cx="26.08" cy="190.06" r="16.77" fill="#929497"/>
+      <polygon id="left_spikes" points="41.81 158.7 31.06 184.22 56.65 177.04 31.16 191.06 47.26 203.6 26.6 195.53 25.97 220.89 18.69 202.33 10.35 214.16 20.23 191.44 0 200.66 17.46 184.94 7.76 172.84 24.96 180.34 41.81 158.7" fill="none"/>
+    </g>
+  </g>
+  <g id="left_arm_group-2" data-name="left_arm_group">
+    <rect id="left_arm-2" data-name="left_arm" x="344.17" y="123.05" width="13.25" height="100.55" transform="translate(653.77 215.02) rotate(170.94)" fill="#929497"/>
+    <g id="left_hand_group-2" data-name="left_hand_group">
+      <circle id="left_hand-2" data-name="left_hand" cx="271.41" cy="44.87" r="16.77" fill="#929497"/>
+      <polygon id="left_spikes-2" data-name="left_spikes" points="304.31 32.68 279.03 44.01 302.64 56.21 274.44 49.08 277.65 69.22 268.06 49.23 250.29 67.34 257.64 48.8 243.47 51.76 266.2 41.88 245.11 34.83 268.61 35.25 269.77 19.79 277.22 37 304.31 32.68" fill="none"/>
+    </g>
+  </g>
+  <rect id="arms_conector" x="159.85" y="276.44" width="220.47" height="3.2" transform="translate(-173.57 98.06) rotate(-30)" fill="#929497"/>
+  <g id="clothes">
+    <polygon id="tuxedo" points="329.19 251.21 174.69 340.4 121.7 248.63 172.03 219.57 227.94 187.29 276.2 159.43 329.19 251.21" fill="#3e3e3e"/>
+    <polygon id="undershirt" points="172.03 219.57 226.64 251.99 225.88 188.48 172.03 219.57" fill="#fff"/>
+    <polygon id="badge" points="269.35 229.18 258.36 222.83 258.36 210.14 269.35 203.79 280.35 210.14 280.35 222.83 269.35 229.18" fill="#fde932"/>
+  </g>
+  <g id="wheel">
+    <polyline points="260.39 314.81 289.92 360.48 301.33 307.32" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="20"/>
+    <polyline points="335.59 330.95 289.92 360.48 343.07 371.89" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="20"/>
+    <g>
+      <circle cx="289.92" cy="360.48" r="54.39" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="20"/>
+      <path d="M390.19,480.39l-29.53-45.68-11.19,52.13" transform="translate(-70.74 -74.23)" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="20"/>
+      <polyline points="244.25 390.01 289.92 360.48 236.75 349.07" fill="none" stroke="#221f1f" stroke-miterlimit="10" stroke-width="20"/>
+    </g>
+  </g>
+  <g id="wheel_cover" opacity="0.8">
+    <path d="M327.94,384.11a70.67,70.67,0,0,0-28.82,81.23L302,463.5l109.24-70.63,2.63-1.7A70.66,70.66,0,0,0,327.94,384.11Z" transform="translate(-70.74 -74.23)" fill="#6d6e71" stroke="#808184" stroke-miterlimit="10" stroke-width="20"/>
+  </g>
+  <rect id="wheel_conector" x="312.23" y="378.36" width="28.38" height="9.88" transform="translate(-226.55 164.4) rotate(-32.88)" fill="#929497"/>
+</svg>

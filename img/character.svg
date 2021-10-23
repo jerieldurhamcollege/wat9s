@@ -3,138 +3,143 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 2684.8 2047.3" style="enable-background:new 0 0 2684.8 2047.3;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#D7DF23;stroke:#D7DF23;stroke-width:30;stroke-miterlimit:10;}
-	.st1{fill:#FF9D8A;}
-	.st2{fill:none;stroke:#ED1C24;stroke-width:5;stroke-miterlimit:10;}
-	.st3{fill:#F7941D;stroke:#FBB040;stroke-width:5;stroke-miterlimit:10;}
-	.st4{fill:#754C29;stroke:#FBB040;stroke-width:5;stroke-miterlimit:10;}
-	.st5{fill:#F7941D;}
+	.st0{fill:#96E191;stroke:#96E191;stroke-width:30;stroke-miterlimit:10;}
+	.st1{fill:#DCF9D7;}
+	.st2{fill:#DCF9D7;stroke:#ED1C24;stroke-width:5;stroke-miterlimit:10;}
+	.st3{fill:#FFE455;stroke:#FBB040;stroke-width:5;stroke-miterlimit:10;}
+	.st4{fill:#5F3300;stroke:#5F3300;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#FFE455;}
 	.st6{fill:none;stroke:#8B5E3C;stroke-width:30;stroke-miterlimit:10;}
 	.st7{fill:#00A651;stroke:#00A651;stroke-width:30;stroke-miterlimit:10;}
-	.st8{fill:#1C75BC;stroke:#231F20;stroke-width:30;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#231F20;stroke-width:30;stroke-miterlimit:10;}
+	.st8{fill:#00B4FF;stroke:#6E7A6C;stroke-width:30;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#9B6F1D;stroke-width:30;stroke-miterlimit:10;}
 	.st10{fill:#939598;}
-	.st11{fill:none;stroke:#231F20;stroke-width:10;stroke-miterlimit:10;}
-	.st12{fill:#53DDF4;}
-	.st13{fill:#020202;}
-	.st14{fill:none;stroke:#0034E9;stroke-width:20;stroke-miterlimit:10;stroke-opacity:0;}
-	.st15{fill:none;}
-	.st16{fill:none;stroke:#231F20;stroke-width:8;stroke-miterlimit:10;}
-	.st17{fill:none;stroke:#231F20;stroke-width:20;stroke-miterlimit:10;}
-	.st18{opacity:0.8;}
-	.st19{fill:#6D6E71;stroke:#808285;stroke-width:20;stroke-miterlimit:10;}
-	.st20{fill:#231F20;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st21{fill:#37B34A;stroke:#FFFFFF;stroke-miterlimit:10;}
-	.st22{fill:#3E3E3E;}
-	.st23{fill:#FFFFFF;}
-	.st24{fill:#FFEB35;}
+	.st11{fill:none;stroke:#231F20;stroke-width:20;stroke-miterlimit:10;}
+	.st12{opacity:0.8;}
+	.st13{fill:#6D6E71;stroke:#808285;stroke-width:20;stroke-miterlimit:10;}
+	.st14{fill:#231F20;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st15{fill:#37B34A;stroke:#FFFFFF;stroke-miterlimit:10;}
+	.st16{fill:#3E3E3E;}
+	.st17{fill:#FFFFFF;}
+	.st18{fill:#FFEB35;}
+	.st19{fill:none;}
+	.st20{fill:none;stroke:#231F20;stroke-width:10;stroke-miterlimit:10;}
+	.st21{fill:#53DDF4;}
+	.st22{fill:#020202;}
+	.st23{fill:none;stroke:#0034E9;stroke-width:20;stroke-miterlimit:10;stroke-opacity:0;}
+	.st24{fill:none;stroke:#231F20;stroke-width:8;stroke-miterlimit:10;}
 </style>
 <g id="Background">
-	<rect x="22.3" y="15" class="st0" width="2649.1" height="792.5"/>
+	<rect x="23.8" y="16" class="st0" width="2649.1" height="792.5"/>
 	<g id="floor">
-		<rect id="floor_background" x="3.8" y="822.7" class="st1" width="2680.9" height="1228.4"/>
+		<rect id="floor_background" x="5.3" y="823.7" class="st1" width="2680.9" height="1228.4"/>
 		<g id="floor_lines_2">
 			<g>
 				<g>
-					<line class="st2" x1="2123.7" y1="827.5" x2="953.4" y2="2054.3"/>
-					<line class="st2" x1="1922.8" y1="823.5" x2="752.4" y2="2050.3"/>
-					<line class="st2" x1="1711" y1="824.7" x2="540.6" y2="2051.5"/>
-					<line class="st2" x1="1510.1" y1="820.7" x2="339.7" y2="2047.4"/>
+					<line class="st2" x1="2125.2" y1="828.5" x2="954.9" y2="2055.3"/>
+					<line class="st2" x1="1924.3" y1="824.5" x2="753.9" y2="2051.3"/>
+					<line class="st2" x1="1712.5" y1="825.7" x2="542.1" y2="2052.5"/>
+					<line class="st2" x1="1511.6" y1="821.7" x2="341.2" y2="2048.4"/>
 				</g>
 				<g>
-					<line class="st2" x1="2671.4" y1="1093.4" x2="1739.5" y2="2070.3"/>
-					<line class="st2" x1="2671.4" y1="878.8" x2="1538.6" y2="2066.2"/>
-					<line class="st2" x1="2517.3" y1="819.5" x2="1326.7" y2="2067.5"/>
-					<line class="st2" x1="2312.2" y1="819.9" x2="1141.8" y2="2046.7"/>
+					<line class="st2" x1="2672.9" y1="1094.4" x2="1741" y2="2071.3"/>
+					<line class="st2" x1="2672.9" y1="879.8" x2="1540.1" y2="2067.2"/>
+					<line class="st2" x1="2518.8" y1="820.5" x2="1328.2" y2="2068.5"/>
+					<line class="st2" x1="2313.7" y1="820.9" x2="1143.3" y2="2047.7"/>
 				</g>
 			</g>
 			<g>
-				<line class="st2" x1="2671.4" y1="1953.8" x2="2557" y2="2073.7"/>
-				<line class="st2" x1="2671.4" y1="1739.2" x2="2356.1" y2="2069.7"/>
-				<line class="st2" x1="2671.4" y1="1518.4" x2="2144.3" y2="2070.9"/>
-				<line class="st2" x1="2683" y1="1291.6" x2="1943.4" y2="2066.9"/>
+				<line class="st2" x1="2672.9" y1="1954.8" x2="2558.5" y2="2074.7"/>
+				<line class="st2" x1="2672.9" y1="1740.2" x2="2357.6" y2="2070.7"/>
+				<line class="st2" x1="2672.9" y1="1519.4" x2="2145.8" y2="2071.9"/>
+				<line class="st2" x1="2684.5" y1="1292.6" x2="1944.9" y2="2067.9"/>
 			</g>
 			<g>
-				<line class="st2" x1="1283.5" y1="828.1" x2="113.1" y2="2054.9"/>
-				<line class="st2" x1="1082.6" y1="824.1" x2="3.8" y2="1954.8"/>
-				<line class="st2" x1="870.8" y1="825.3" x2="4.2" y2="1733.6"/>
-				<line class="st2" x1="669.8" y1="821.3" x2="3.8" y2="1519.3"/>
+				<line class="st2" x1="1285" y1="829.1" x2="114.6" y2="2055.9"/>
+				<line class="st2" x1="1084.1" y1="825.1" x2="5.3" y2="1955.8"/>
+				<line class="st2" x1="872.3" y1="826.3" x2="5.7" y2="1734.6"/>
+				<line class="st2" x1="671.3" y1="822.3" x2="5.3" y2="1520.3"/>
 			</g>
 			<g>
-				<line class="st2" x1="476.9" y1="816.1" x2="1.8" y2="1314.1"/>
-				<line class="st2" x1="265.9" y1="822.7" x2="3.8" y2="1097.3"/>
-				<line class="st2" x1="55.2" y1="822.7" x2="3.8" y2="876.5"/>
+				<line class="st2" x1="478.4" y1="817.1" x2="3.3" y2="1315.1"/>
+				<line class="st2" x1="267.4" y1="823.7" x2="5.3" y2="1098.3"/>
+				<line class="st2" x1="56.7" y1="823.7" x2="5.3" y2="877.5"/>
 			</g>
 		</g>
 		<g id="floor_lines_1">
 			<g>
-				<line class="st2" x1="11.5" y1="1184.7" x2="838" y2="2051.1"/>
-				<line class="st2" x1="7.6" y1="1395.3" x2="639.5" y2="2057.6"/>
-				<line class="st2" x1="8.8" y1="1617.3" x2="427.9" y2="2056.7"/>
-				<line class="st2" x1="4.9" y1="1827.9" x2="218.3" y2="2051.6"/>
+				<line class="st2" x1="13" y1="1185.7" x2="839.5" y2="2052.1"/>
+				<line class="st2" x1="9.1" y1="1396.3" x2="641" y2="2058.6"/>
+				<line class="st2" x1="10.3" y1="1618.3" x2="429.4" y2="2057.7"/>
+				<line class="st2" x1="6.4" y1="1828.9" x2="219.8" y2="2052.6"/>
 			</g>
 			<g>
-				<line class="st2" x1="458.9" y1="815.5" x2="1637.7" y2="2051.1"/>
-				<line class="st2" x1="261.8" y1="821.7" x2="1434.6" y2="2051.1"/>
-				<line class="st2" x1="52" y1="822.7" x2="1223.9" y2="2051.1"/>
-				<line class="st2" x1="3.8" y1="986.8" x2="1019.2" y2="2051.1"/>
+				<line class="st2" x1="460.4" y1="816.5" x2="1639.2" y2="2052.1"/>
+				<line class="st2" x1="263.3" y1="822.7" x2="1436.1" y2="2052.1"/>
+				<line class="st2" x1="53.5" y1="823.7" x2="1225.4" y2="2052.1"/>
+				<line class="st2" x1="5.3" y1="987.8" x2="1020.7" y2="2052.1"/>
 			</g>
 			<g>
-				<line class="st2" x1="1283.4" y1="820.3" x2="2462.1" y2="2055.8"/>
-				<line class="st2" x1="1086.2" y1="826.5" x2="2259.1" y2="2055.8"/>
-				<line class="st2" x1="876.5" y1="827.4" x2="2048.4" y2="2055.8"/>
-				<line class="st2" x1="667.8" y1="823.4" x2="1843.6" y2="2055.8"/>
+				<line class="st2" x1="1284.9" y1="821.3" x2="2463.6" y2="2056.8"/>
+				<line class="st2" x1="1087.7" y1="827.5" x2="2260.6" y2="2056.8"/>
+				<line class="st2" x1="878" y1="828.4" x2="2049.9" y2="2056.8"/>
+				<line class="st2" x1="669.3" y1="824.4" x2="1845.1" y2="2056.8"/>
 			</g>
 			<g>
-				<line class="st2" x1="2104.2" y1="815.5" x2="2671.4" y2="1410.1"/>
-				<line class="st2" x1="1907.1" y1="821.7" x2="2671.4" y2="1622.9"/>
-				<line class="st2" x1="1697.3" y1="822.7" x2="2671.4" y2="1843.7"/>
-				<line class="st2" x1="1488.7" y1="818.6" x2="2664.5" y2="2051.1"/>
+				<line class="st2" x1="2105.7" y1="816.5" x2="2672.9" y2="1411.1"/>
+				<line class="st2" x1="1908.6" y1="822.7" x2="2672.9" y2="1623.9"/>
+				<line class="st2" x1="1698.8" y1="823.7" x2="2672.9" y2="1844.7"/>
+				<line class="st2" x1="1490.2" y1="819.6" x2="2666" y2="2052.1"/>
 			</g>
 			<g>
-				<line class="st2" x1="2521.4" y1="825.8" x2="2671.4" y2="983"/>
-				<line class="st2" x1="2312.8" y1="821.7" x2="2671.4" y2="1197.6"/>
+				<line class="st2" x1="2522.9" y1="826.8" x2="2672.9" y2="984"/>
+				<line class="st2" x1="2314.3" y1="822.7" x2="2672.9" y2="1198.6"/>
 			</g>
 		</g>
 	</g>
 	<g>
 		<g>
-			<path class="st3" d="M2267.3,1239.5c443.1,0,116.6-544.6,116.6-544.6"/>
-			<path class="st3" d="M2311.6,1239.5c-561,0-147.6-544.6-147.6-544.6"/>
+			<path class="st3" d="M2268.8,1240.5c443.1,0,116.6-544.6,116.6-544.6"/>
+			<path class="st3" d="M2313.1,1240.5c-561,0-147.6-544.6-147.6-544.6"/>
 		</g>
-		<ellipse class="st4" cx="2267.3" cy="694.9" rx="123.8" ry="25.7"/>
-		<polyline class="st5" points="2163.9,694.9 2164.4,1151.6 2377.5,1151.6 2411.5,752 2383.5,720.6 		"/>
+		<ellipse class="st4" cx="2268.8" cy="695.9" rx="123.8" ry="25.7"/>
+		<polyline class="st5" points="2165.4,695.9 2165.9,1152.6 2379,1152.6 2413,753 2385,721.6 		"/>
+		<path class="st4" d="M2172.8,711.5c2.5,1.5,5.6,1.9,11.7,2.6c7.3,0.8,12.8,0.7,12.9,0.7c2.6-0.1,4.5,0,42,3.1
+			c35.2,2.9,33.2,2.8,35.1,2.9c7.1,0.3,20.2-0.1,46.1-0.9c13.1-0.4,26.1-3.1,39.1-2.2c5.1,0.4,15.8,1.4,25.5-4.8
+			c2.7-1.7,5.1-3.2,5.1-5.1c0-6.2-27-10.5-63-16c-45.7-7-81.3-12.3-126.5-9.4c-16.2,1.1-33.4,3.2-36.1,11.9
+			C2163.3,699.7,2167.1,708,2172.8,711.5z"/>
+		<ellipse class="st4" cx="2269.9" cy="699" rx="127.6" ry="39.3"/>
 	</g>
-	<line class="st6" x1="2267.3" y1="693.9" x2="2267.3" y2="442.4"/>
-	<path class="st7" d="M2542.9,360.2C2193.4,290.8,2293.5,471,2293.5,471"/>
-	<path class="st7" d="M1954.5,360.2C2355,290.8,2240.3,471,2240.3,471"/>
-	<rect x="511.5" y="125.3" class="st8" width="513.6" height="513.6"/>
-	<line class="st9" x1="768.3" y1="125.3" x2="768.3" y2="638.9"/>
-	<line class="st9" x1="511.5" y1="382.1" x2="1025.1" y2="382.1"/>
+	<line class="st6" x1="2268.8" y1="694.9" x2="2268.8" y2="443.4"/>
+	<path class="st7" d="M2544.4,361.2C2194.9,291.8,2295,472,2295,472"/>
+	<path class="st7" d="M1956,361.2c400.5-69.4,285.8,110.8,285.8,110.8"/>
+	<rect x="513" y="126.3" class="st8" width="513.6" height="513.6"/>
+	<line class="st9" x1="769.8" y1="126.3" x2="769.8" y2="639.9"/>
+	<line class="st9" x1="513" y1="383.1" x2="1026.6" y2="383.1"/>
 </g>
 <g id="WAT9S">
 	<rect id="body" x="930.5" y="868.5" class="st10" width="684.3" height="467.7"/>
 	<rect id="arms_conector" x="851.6" y="889" class="st10" width="845.6" height="12.3"/>
 	<g id="wheel">
-		<polyline class="st17" points="1276.8,1396.8 1276.8,1664.1 1465.7,1475.2 		"/>
-		<polyline class="st17" points="1544.1,1664.1 1276.8,1664.1 1465.7,1853 		"/>
+		<polyline class="st11" points="1276.8,1396.8 1276.8,1664.1 1465.7,1475.2 		"/>
+		<polyline class="st11" points="1544.1,1664.1 1276.8,1664.1 1465.7,1853 		"/>
 		<g>
-			<circle class="st17" cx="1276.8" cy="1664.1" r="267.3"/>
-			<path class="st17" d="M1276.8,1931.4v-267.3l-185.3,185.3"/>
-			<polyline class="st17" points="1009.5,1664.1 1276.8,1664.1 1087.8,1475.1 			"/>
+			<circle class="st11" cx="1276.8" cy="1664.1" r="267.3"/>
+			<path class="st11" d="M1276.8,1931.4v-267.3l-185.3,185.3"/>
+			<polyline class="st11" points="1009.5,1664.1 1276.8,1664.1 1087.8,1475.1 			"/>
 		</g>
 	</g>
-	<g id="wheel_cover" class="st18">
-		<path class="st19" d="M1276.8,1367.9c-161,0-296.5,109.7-335.7,258.4h671.4C1573.3,1477.6,1437.8,1367.9,1276.8,1367.9z"/>
+	<g id="wheel_cover" class="st12">
+		<path class="st13" d="M1276.8,1367.9c-161,0-296.5,109.7-335.7,258.4h671.4C1573.3,1477.6,1437.8,1367.9,1276.8,1367.9z"/>
 	</g>
 	<g id="battery">
-		<rect id="battery_x5F_cell" x="937.6" y="909.1" class="st20" width="664.6" height="370.3"/>
-		<rect id="battery_x5F_level" x="937.6" y="909.1" class="st21" width="125.7" height="370.3"/>
+		<rect id="battery_x5F_cell" x="937.6" y="909.1" class="st14" width="664.6" height="370.3"/>
+		<rect id="battery_x5F_level" x="937.6" y="909.1" class="st15" width="125.7" height="370.3"/>
 	</g>
 	<g id="clothes">
-		<polygon id="tuxedo" class="st22" points="1614.8,1301.6 930.5,1301.6 930.5,895.1 1153.4,895.1 1401,895.1 1614.8,895.1 		"/>
-		<polygon id="undershirt" class="st23" points="1153.4,895.1 1272.7,1107.5 1391.9,895.1 		"/>
-		<polygon id="badge" class="st24" points="1458.3,1113.6 1433.9,1071.5 1458.3,1029.3 1506.9,1029.3 1531.3,1071.5 1506.9,1113.6 
+		<polygon id="tuxedo" class="st16" points="1614.8,1301.6 930.5,1301.6 930.5,895.1 1153.4,895.1 1401,895.1 1614.8,895.1 		"/>
+		<polygon id="undershirt" class="st17" points="1153.4,895.1 1272.7,1107.5 1391.9,895.1 		"/>
+		<polygon id="badge" class="st18" points="1458.3,1113.6 1433.9,1071.5 1458.3,1029.3 1506.9,1029.3 1531.3,1071.5 1506.9,1113.6 
 					"/>
 	</g>
 	<rect id="wheel_conector" x="1202.9" y="1336.3" class="st10" width="139.5" height="48.6"/>
@@ -142,14 +147,14 @@
 		<circle id="right_shoulder_00000137123861571602729140000006942797329609787550_" class="st10" cx="838.3" cy="889" r="64.3"/>
 		<rect id="left_arm" x="812.9" y="868.5" class="st10" width="50.8" height="385.6"/>
 		<g id="left_hand_group">
-			<polygon id="left_spikes" class="st15" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
+			<polygon id="left_spikes" class="st19" points="706.3,1298.2 808.9,1270.6 726.8,1210.1 829.3,1254.2 829.3,1175.9 853.6,1257.5 
 				931.8,1199.6 892.8,1265.4 948.3,1262.7 856.2,1286.4 931.8,1325.9 843.1,1310.1 829.3,1367.9 811.5,1298.2 			"/>
 			<circle id="left_hand" class="st10" cx="838.3" cy="1271.9" r="64.3"/>
 		</g>
 	</g>
 	<g id="right_arm_group">
 		<g id="right_hand_group">
-			<polygon id="right_spikes" class="st15" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
+			<polygon id="right_spikes" class="st19" points="1680.7,1142.9 1708.3,1245.4 1768.8,1163.4 1724.8,1265.9 1803,1265.9 
 				1721.5,1290.1 1779.3,1368.4 1713.6,1329.4 1716.2,1384.8 1692.6,1292.8 1653.1,1368.4 1668.9,1279.6 1611,1265.9 1680.7,1248.1 
 							"/>
 			<circle id="right_hand" class="st10" cx="1707" cy="1271.9" r="64.3"/>
@@ -159,88 +164,88 @@
 	</g>
 	<g id="smoke">
 		<g id="left_x5F_smoke">
-			<path id="left_x5F_smoke2" class="st15" d="M967.3,1841.3c-0.4,1.3-24.9-4.6-50.6-19.8c-33.1-19.6-46.4-41.7-50.2-48.2
+			<path id="left_x5F_smoke2" class="st19" d="M967.3,1841.3c-0.4,1.3-24.9-4.6-50.6-19.8c-33.1-19.6-46.4-41.7-50.2-48.2
 				c-1.6-2.8-2.6-4.9-3.7-7c-18.8-38.2-19-68.5-31.5-108.9c-9.8-31.6-16.1-52.1-30.6-55.8c-15.2-3.9-34.7,11.8-42.1,29.8
 				c-15,36.5,19.2,83.3,30,98C854.9,1819.5,968.2,1838.5,967.3,1841.3z"/>
-			<path id="left_x5F_smoke1" class="st15" d="M1026.9,1940.3c0.2,1.4-24.4,6.7-54.2,4.1c-38.3-3.3-59.9-17.3-66.2-21.6
+			<path id="left_x5F_smoke1" class="st19" d="M1026.9,1940.3c0.2,1.4-24.4,6.7-54.2,4.1c-38.3-3.3-59.9-17.3-66.2-21.6
 				c-2.6-1.8-4.4-3.2-6.4-4.7c-33.6-26.3-46.9-53.4-75.7-84.4c-22.5-24.2-37.1-39.9-51.8-37c-15.4,3.1-26.1,25.7-25,45.1
 				c2.3,39.4,53.5,66.6,69.6,75.2C916.1,1969.6,1026.5,1937.4,1026.9,1940.3z"/>
 		</g>
 		<g id="right_x5F_smoke">
-			<path id="right_x5F_smoke2" class="st15" d="M1598.8,1825.1c0.4,1.3,23.5-4.6,47.8-19.8c31.2-19.6,43.8-41.7,47.3-48.2
+			<path id="right_x5F_smoke2" class="st19" d="M1598.8,1825.1c0.4,1.3,23.5-4.6,47.8-19.8c31.2-19.6,43.8-41.7,47.3-48.2
 				c1.5-2.8,2.4-4.9,3.5-7c17.7-38.2,18-68.5,29.7-108.9c9.2-31.6,15.2-52.1,28.9-55.8c14.4-3.9,32.7,11.8,39.7,29.8
 				c14.2,36.5-18.1,83.3-28.3,98C1704.9,1803.3,1598,1822.3,1598.8,1825.1z"/>
-			<path id="right_x5F_smoke1" class="st15" d="M1542.7,1931.1c-0.2,1.4,23,6.7,51.1,4.1c36.1-3.3,56.5-17.3,62.4-21.6
+			<path id="right_x5F_smoke1" class="st19" d="M1542.7,1931.1c-0.2,1.4,23,6.7,51.1,4.1c36.1-3.3,56.5-17.3,62.4-21.6
 				c2.5-1.8,4.2-3.2,6-4.7c31.7-26.3,44.2-53.4,71.4-84.4c21.2-24.2,35-39.9,48.9-37c14.5,3.1,24.6,25.7,23.5,45.1
 				c-2.2,39.4-50.5,66.6-65.7,75.2C1647.1,1960.4,1543.1,1928.2,1542.7,1931.1z"/>
 		</g>
 	</g>
-		<rect id="neck" x="1202.7" y="632.5" class="st10" width="145.6" height="268.7"/>
+	<rect id="neck" x="1202.7" y="632.5" class="st10" width="145.6" height="268.7"/>
 	<g id="head">
 		<circle id="_head" class="st10" cx="1276.8" cy="548.8" r="283.7"/>
 		<g id="eyes">
 			<g id="left_eye">
 				<g id="left_dead_eye">
-					<line id="ldy2" class="st11" x1="1097.4" y1="420.9" x2="1209.4" y2="532.8"/>
-					<line id="ldy1" class="st11" x1="1209.4" y1="420.9" x2="1097.4" y2="532.8"/>
+					<line id="ldy2" class="st20" x1="1097.4" y1="420.9" x2="1209.4" y2="532.8"/>
+					<line id="ldy1" class="st20" x1="1209.4" y1="420.9" x2="1097.4" y2="532.8"/>
 				</g>
-				<circle id="left_eyeball" class="st12" cx="1153.4" cy="476.9" r="79.6"/>
-				<circle id="left_pupil" class="st13" cx="1153.4" cy="476.9" r="29.1"/>
+				<circle id="left_eyeball" class="st21" cx="1153.4" cy="476.9" r="79.6"/>
+				<circle id="left_pupil" class="st22" cx="1153.4" cy="476.9" r="29.1"/>
 			</g>
 			<g id="right_eye">
 				<g id="right_dead_eye">
-					<line id="ldy2-2" class="st11" x1="1335.9" y1="416.8" x2="1447.9" y2="528.7"/>
-					<line id="ldy1-2" class="st11" x1="1447.9" y1="416.8" x2="1335.9" y2="528.7"/>
+					<line id="ldy2-2" class="st20" x1="1335.9" y1="416.8" x2="1447.9" y2="528.7"/>
+					<line id="ldy1-2" class="st20" x1="1447.9" y1="416.8" x2="1335.9" y2="528.7"/>
 				</g>
-				<circle id="right_eyeball" class="st12" cx="1391.9" cy="472.8" r="79.6"/>
-				<circle id="right_pupil" class="st13" cx="1391.9" cy="472.8" r="29.1"/>
+				<circle id="right_eyeball" class="st21" cx="1391.9" cy="472.8" r="79.6"/>
+				<circle id="right_pupil" class="st22" cx="1391.9" cy="472.8" r="29.1"/>
 			</g>
 		</g>
 		<g id="antennas">
-			<polyline id="electric_current" class="st14" points="1031.3,196 1113.2,125 1194.4,195.4 1275.4,125.2 1356.1,195.3 
+			<polyline id="electric_current" class="st23" points="1031.3,196 1113.2,125 1194.4,195.4 1275.4,125.2 1356.1,195.3 
 				1436.8,125.3 1519.7,197.2 			"/>
 			
-				<rect id="right_antenna" x="1369.8" y="214.9" transform="matrix(0.5 -0.866 0.866 0.5 530.8552 1405.4806)" class="st10" width="225.7" height="56.2"/>
+				<rect id="right_antenna" x="1369.8" y="214.9" transform="matrix(0.5 -0.866 0.866 0.5 530.8453 1405.4758)" class="st10" width="225.7" height="56.2"/>
 			
-				<rect id="left_antenna" x="1045.7" y="130.2" transform="matrix(0.866 -0.5 0.5 0.866 22.3412 569.4634)" class="st10" width="56.2" height="225.7"/>
+				<rect id="left_antenna" x="1045.7" y="130.2" transform="matrix(0.866 -0.5 0.5 0.866 22.3406 569.4636)" class="st10" width="56.2" height="225.7"/>
 		</g>
-		<path id="happy_mouth" class="st15" d="M1150.4,670.7c0,35.6,53.4,64.5,119.2,64.5s119.2-28.9,119.2-64.5H1150.4z"/>
-		<path id="sad_mouth" class="st15" d="M1155.7,707.7c0-32.4,53.4-58.6,119.2-58.6s119.2,26.3,119.2,58.6H1155.7z"/>
-		<line id="mouth" class="st16" x1="1153.4" y1="678.6" x2="1391.9" y2="678.6"/>
+		<path id="happy_mouth" class="st19" d="M1150.4,670.7c0,35.6,53.4,64.5,119.2,64.5s119.2-28.9,119.2-64.5H1150.4z"/>
+		<path id="sad_mouth" class="st19" d="M1155.7,707.7c0-32.4,53.4-58.6,119.2-58.6s119.2,26.3,119.2,58.6H1155.7z"/>
+		<line id="mouth" class="st24" x1="1153.4" y1="678.6" x2="1391.9" y2="678.6"/>
 		<g id="tears">
-			<path id="tear2" class="st15" d="M1451.4,530.9c-54.4,54.4,0,61.6,0,61.6C1503.6,540.2,1451.4,530.9,1451.4,530.9z"/>
-			<path id="tear1" class="st15" d="M1094.9,544.9c-54.4,54.4,0,61.6,0,61.6C1147.2,554.2,1094.9,544.9,1094.9,544.9z"/>
+			<path id="tear2" class="st19" d="M1451.4,530.9c-54.4,54.4,0,61.6,0,61.6C1503.6,540.2,1451.4,530.9,1451.4,530.9z"/>
+			<path id="tear1" class="st19" d="M1094.9,544.9c-54.4,54.4,0,61.6,0,61.6C1147.2,554.2,1094.9,544.9,1094.9,544.9z"/>
 		</g>
 		<g id="termometer">
-			<path id="termometer_x5F_glass" class="st15" d="M1541.9,556.8l-170.7,170.9c-4.1,4.1-10.6,4.1-14.7,0l-37.1-37.1
-				c-4.1-4.1-4.1-10.7,0-14.7l170.7-170.9c4.1-4.1,10.6-4.1,14.7,0l37.1,37.1C1545.9,546.1,1545.9,552.7,1541.9,556.8z"/>
+			<path id="termometer_x5F_glass" class="st19" d="M1541.9,556.8l-170.7,170.9c-4.1,4.1-10.6,4.1-14.7,0l-37.1-37.1
+				c-4.1-4.1-4.1-10.7,0-14.7L1490.1,505c4.1-4.1,10.6-4.1,14.7,0l37.1,37.1C1545.9,546.1,1545.9,552.7,1541.9,556.8z"/>
 			<g id="termometer_x5F_fill">
 				
-					<rect x="1334.2" y="670.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -108.306 1154.1744)" class="st15" width="9.7" height="75.3"/>
-				<path class="st15" d="M1315.4,686.9l43.4,43.1c1.8,1.8,1.8,4.6,0,6.4l0,0c-1.8,1.8-4.6,1.8-6.4,0l-43.4-43.1
+					<rect x="1334.2" y="670.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -108.327 1154.1815)" class="st19" width="9.7" height="75.3"/>
+				<path class="st19" d="M1315.4,686.9l43.4,43.1c1.8,1.8,1.8,4.6,0,6.4l0,0c-1.8,1.8-4.6,1.8-6.4,0l-43.4-43.1
 					c-1.8-1.8-1.8-4.6,0-6.4l0,0C1310.8,685.2,1313.7,685.2,1315.4,686.9z"/>
 				
-					<rect x="1341.6" y="663.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -101.1263 1157.3119)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1341.6" y="663.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -101.1305 1157.3242)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1347.9" y="656.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -94.541 1159.8162)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1347.9" y="656.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -94.5554 1159.8219)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1355.3" y="649.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -87.3613 1162.9539)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1355.3" y="649.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -87.3591 1162.9647)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1362.5" y="642.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -80.1504 1165.9165)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1362.5" y="642.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -80.1421 1165.949)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1369.9" y="634.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -72.9 1169.0835)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1369.9" y="634.9" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -72.9165 1169.0797)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1376.7" y="627.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -65.5746 1171.7029)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1376.7" y="627.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -65.6183 1171.7151)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1384.1" y="620.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -58.3949 1174.8405)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1384.1" y="620.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -58.4219 1174.8579)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1390.8" y="613.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -51.5753 1177.5437)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1390.8" y="613.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -51.5774 1177.5553)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1398.2" y="606.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -44.3956 1180.6813)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1398.2" y="606.3" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -44.3811 1180.698)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1403.9" y="600.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -38.3759 1182.9703)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1403.9" y="600.2" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -38.4194 1182.9812)" class="st19" width="9.7" height="75.3"/>
 				
-					<rect x="1411.3" y="593.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -31.1962 1186.1079)" class="st15" width="9.7" height="75.3"/>
+					<rect x="1411.3" y="593.1" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -31.2231 1186.1239)" class="st19" width="9.7" height="75.3"/>
 			</g>
 		</g>
 	</g>

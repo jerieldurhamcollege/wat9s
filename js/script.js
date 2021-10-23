@@ -1,3 +1,12 @@
+Swal.fire({
+    title: '<strong class="titleFont">MEET WATS</strong>',
+    html:
+    '<p>Warfare Assistant Type 9S</p>',
+    '<img id="wat9s_popup_img" style="height:30vh" src="/img/popup.svg"></img>',
+    showCloseButton: true,
+    confirmButtonText: "LET'S PLAY"
+  });
+
 window.onload = function(){
     //Audio
     let audio = [new Audio('../audio/chainsaw.mp3'), new Audio('../audio/droplet.wav'), new Audio('../audio/cheerful.mp3'), 
