@@ -2,10 +2,14 @@
   font-family: NativeBrush;
   src: url('../fonts/Native_Brush.ttf');
 }
-
+@font-face {
+  font-family: AcuminVariableConcept;
+  src: url('../fonts/AcuminVariableConcept.ttf');
+}
 * {
   margin: 0px;
   padding: 0px;
+  font-family: AcuminVariableConcept, 'Arial', 'sans-serif';
 }
 
 body{
@@ -32,6 +36,13 @@ body{
   color: white;
   font-size:5.5rem
 }
+header a h2{
+  font-family: NativeBrush;
+}
+.popup_text{
+  color: white;
+}
+
 .swal2-container div{
   background-color: #54bd84;
 }
@@ -112,6 +123,21 @@ footer{
 }
 footer p{
   margin: 10px;
+}
+.footer_text a{
+  color:white;
+}
+#footer_link_1{
+  text-decoration:underline;
+  color: white;
+  cursor: pointer;
+}
+#authors_div p a{
+  text-decoration:underline;
+  color: white;
+}
+.white_text{
+  color: white;
 }
 
 /* Landscape */
