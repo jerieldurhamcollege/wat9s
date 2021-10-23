@@ -64,11 +64,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   margin: 2em 20% 0 20%;
   gap: 0.5em;
-  /* display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  overflow: hidden;
-  margin: 1em; */
 }
 #characterContainer{
   grid-column-end: -3;

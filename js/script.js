@@ -4,7 +4,7 @@ Swal.fire({
     '<p class="popup_text">Warfare Assistant Type 9S</p>' + 
     '<p class="popup_text">(He is totally friendly now, ahem, sometimes)</p>' + 
     '<br>' + 
-    '<img id="wat9s_popup_img" style="height:30vh" src="/img/popup.svg"></img>',
+    '<img id="wat9s_popup_img" style="height:30vh" src="../img/popup.svg"></img>',
     showCloseButton: true,
     confirmButtonText: "LET'S PLAY"
 });
