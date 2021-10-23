@@ -92,8 +92,7 @@ window.onload = function(){
             confirmButtonText: "BACK TO PLAYING"
         });
     });
-    // // ! EXAMPLE OF TARGETTING MULTIPLE SELECTORS NOTE THAT WE CAN STORE
-    // // ! VARIABLES INTO AN ARRAY AND TARGET THE ARRAY IN GSAP3!!!
+
     let pupils = [leftPupil, rightPupil];
     let eyes = [leftEyeball, rightEyeball];
     let left_tire_smoke = [left_tire_smoke_1, left_tire_smoke_2];
@@ -102,7 +101,6 @@ window.onload = function(){
     let termometer = [termometer_fill, termometer_glass];
     let previousEyes = [leftEyeball, rightEyeball, pupils];
     let deadEyes = [leftDeadEye, rightDeadEye];
-    // let rotateReset = [lEar,rEar, lWhisker, rWhisker]; // Contains all layers that we want to reset rotation to 0
 
     // **************** INTRO FADE ****************
 
@@ -231,7 +229,7 @@ window.onload = function(){
             xPercent: 0,
             rotation: "0"
         });
-        //This actually works...
+        //This actually works...(?)
         characterObj.data = 'img/character.svg';
     }
 
