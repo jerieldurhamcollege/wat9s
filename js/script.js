@@ -58,6 +58,7 @@ window.onload = function(){
     let sadBtn = document.getElementById('sad');
     let sickBtn = document.getElementById('sick');
 
+    let buttons = [neutralBtn, happyBtn, deadBtn, angryBtn, sadBtn, sickBtn];
 
     // // ! EXAMPLE OF TARGETTING MULTIPLE SELECTORS NOTE THAT WE CAN STORE
     // // ! VARIABLES INTO AN ARRAY AND TARGET THE ARRAY IN GSAP3!!!
@@ -82,34 +83,75 @@ window.onload = function(){
 
     //  * Add event listener and run function when we click
     neutralBtn.addEventListener('click', function() {
-        currentAnimation = 'neutral';
-        neutral();
+        reset();
+        if (currentAnimation != 'neutral'){
+            currentAnimation = 'neutral';
+            resetBtns();
+            clickedButton(this);
+            neutral();
+        }
     });
 
     happyBtn.addEventListener('click', function() {
-        currentAnimation = 'happy';
-        happy();
+        reset();
+        if (currentAnimation != 'happy'){
+            currentAnimation = 'happy';
+            resetBtns();
+            clickedButton(this);
+            happy();
+        }
     });
 
     angryBtn.addEventListener('click', function() {
-        currentAnimation = 'angry';
-        angry();
+        reset();
+        if (currentAnimation != 'angry'){
+            currentAnimation = 'angry';
+            resetBtns();
+            clickedButton(this);
+            angry();
+        }
     });
 
     sadBtn.addEventListener('click', function() {
-        currentAnimation = 'sad';
-        sad();
+        reset();
+        if (currentAnimation != 'sad'){
+            currentAnimation = 'sad';
+            resetBtns();
+            clickedButton(this);
+            sad();
+        }
     });
     sickBtn.addEventListener('click', function() {
-        currentAnimation = 'sick';
-        sick();
+        reset();
+        if (currentAnimation != 'sick'){
+            currentAnimation = 'sick';
+            resetBtns();
+            clickedButton(this);
+            sick();
+        }
     });
     deadBtn.addEventListener('click', function() {
-        currentAnimation = 'dead';
-        dead();
+        reset();
+        if (currentAnimation != 'dead'){
+            currentAnimation = 'dead';
+            resetBtns();
+            clickedButton(this);
+            dead();
+        }
     });
 
     // **************** ANIMATION FUNCTIONS ****************
+    let resetBtns = function(){
+        //Reactivate all buttons
+        for (let i=0; i < buttons.length; i++) {
+            buttons[i].disabled = false;
+            buttons[i].classList.remove("clickedButton");
+        }
+    }
+    let clickedButton = function(button){
+        button.disabled = true;
+        button.classList.add("clickedButton");
+    }
     let reset = function (){
         //Kill all delayed calls 
         for (let i = 0; i < _gsapDelayedCall; i++) {
@@ -158,17 +200,19 @@ window.onload = function(){
             rotation: "0"
         });
         //This actually works...
-        // characterObj.data = 'img/character.svg';
+        characterObj.data = 'img/character.svg';
     }
 
     //For sounds that only play once.
-    let playSound = function (sound, interval, condition) {
+    let playSound = function (soundIndex, interval, condition) {
         if (condition == currentAnimation){
-            sound.play();
+            audio[soundIndex].play();
             _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(interval, ()=>{
-                playSound(sound, interval, condition);
+                if (condition == currentAnimation){
+                    playSound(soundIndex, interval, condition);
+                }
             })
-        }
+        }8
     }
 
     function neutral(){
@@ -379,7 +423,7 @@ window.onload = function(){
 
     function sad(){
         reset();
-        playSound(audio[1], 1, 'sad');
+        playSound(1, 1, 'sad');
         animations[sadIndex][1] = gsap.to(tears,{
             fill: '#27aae1'
         });
@@ -569,12 +613,16 @@ window.onload = function(){
                     duration: 1.3
                 });
                 //Play Audio
-                audio[5].play();
-                audio[4].play();
-                audio[6].play();
+                _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(0.5, ()=>{
+                    if (currentAnimation == 'dead'){
+                        audio[5].play();
+                        audio[4].play();
+                        audio[6].play();
+                    }
+                });
                 _gsapDelayedCall[_gsapDelayedCall.length] = gsap.delayedCall(1.3, ()=>{
                     if (currentAnimation == 'dead'){
-                        playSound(audio[7], 0.7, 'dead');
+                        playSound(7, 3.3, 'dead');
                     }
                 });
             }
@@ -593,5 +641,9 @@ window.onload = function(){
         filter: "blur(12px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
         });
     }
+
+
+    //On load
+    neutral();
 }
 
