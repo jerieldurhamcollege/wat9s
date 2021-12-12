@@ -64,12 +64,12 @@ window.onload = function(){
     // * target buttons to trigger function
     let neutralBtn = document.getElementById('neutral');
     let happyBtn = document.getElementById('happy');
-    let deadBtn = document.getElementById('dead');
+    // let deadBtn = document.getElementById('dead');
     let angryBtn = document.getElementById('angry');
     let sadBtn = document.getElementById('sad');
-    let sickBtn = document.getElementById('sick');
+    // let sickBtn = document.getElementById('sick');
 
-    let buttons = [neutralBtn, happyBtn, deadBtn, angryBtn, sadBtn, sickBtn];
+    let buttons = [neutralBtn, happyBtn, angryBtn, sadBtn];
 
     let audioAuthors = document.getElementById('footer_link_1');
     audioAuthors.addEventListener('click', function(){
@@ -151,24 +151,24 @@ window.onload = function(){
             sad();
         }
     });
-    sickBtn.addEventListener('click', function() {
-        reset();
-        if (currentAnimation != 'sick'){
-            currentAnimation = 'sick';
-            resetBtns();
-            clickedButton(this);
-            sick();
-        }
-    });
-    deadBtn.addEventListener('click', function() {
-        reset();
-        if (currentAnimation != 'dead'){
-            currentAnimation = 'dead';
-            resetBtns();
-            clickedButton(this);
-            dead();
-        }
-    });
+    // sickBtn.addEventListener('click', function() {
+    //     reset();
+    //     if (currentAnimation != 'sick'){
+    //         currentAnimation = 'sick';
+    //         resetBtns();
+    //         clickedButton(this);
+    //         sick();
+    //     }
+    // });
+    // deadBtn.addEventListener('click', function() {
+    //     reset();
+    //     if (currentAnimation != 'dead'){
+    //         currentAnimation = 'dead';
+    //         resetBtns();
+    //         clickedButton(this);
+    //         dead();
+    //     }
+    // });
 
     // **************** ANIMATION FUNCTIONS ****************
     let resetBtns = function(){

@@ -19,7 +19,7 @@ body{
   background-size: cover;
   background-attachment: fixed;
   background-position: top center; 
-  padding-bottom:60px;   /*footer height*/
+  /* padding-bottom:60px;   footer height */
 }
 
 #nav {
@@ -61,15 +61,85 @@ header a h2{
 main {
   display: grid;
   /* grid-template-columns: repeat(auto-fill, minmax(30em, 1fr)); */
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 2em 20% 0 20%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  margin: 1em 10% 0 10%;
   gap: 0.5em;
+}
+.menu{
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+}
+.menu input{
+  padding-left: 5px;
+  height: auto;
+  min-height: 2em;
+  margin: 0.4em;
+  font-size: 1.5rem;
+}
+.menu button {
+  height: auto;
+  min-height: 2em;
+  width: auto;
+  margin: 0.4em;
+  color: #eee;
+  background-color: #54bd84;
+  font-size: 1.5rem;
+  border-left: 5px solid #195836;
+  border-bottom: 2px solid #195836;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu button:hover {
+  cursor:pointer;
+  background-color: #049c49;
+  border-left: 1px solid #195836;
+}
+#heartIcon{
+  color: red;
+  padding-left: 0.5em;
+}
+#petSaysText{
+  min-width: 300px;
+  max-width: 600px;
+  width: 450px;
+}
+.textContainer{
+  display: flex;
+  place-items: center;
+  height: auto;
+  min-height: 2em;
+  width: auto;
+  margin: 0.4em;
+  color: #eee;
+  background-color: #54bd84;
+  font-size: 1.5rem;
+  /* border-left: 5px solid #195836;
+  border-bottom: 2px solid #195836; */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #characterContainer{
   grid-column-end: -3;
-  grid-column-start: 1;
+  grid-column-start: 3;
 }
 #characterContainer, #controls {
+  display:flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.controlsSeparator{
+  width: 100%;
+  height: 10px;
+  border-bottom: 1px solid #195836;
+  text-align: center
+}
+.separatorText{
+  font-size: 1em;
+  padding: 0.1em;
+  background-color: rgba(226, 237, 247, 1);
+}
+#characterContainer, #controls1 {
   display:flex;
   justify-content: space-between;
   width: 100%;
@@ -83,8 +153,17 @@ main {
   grid-column-end: -1;
 }
 
+#controls1{
+  max-width: 20em;
+  grid-column-start: 1;
+  flex-direction: column;
+  place-items: center;
+  grid-column-end: 3;
+}
+
 #controls button {
-  height: 3rem;
+  height: auto;
+  min-height: 2em;
   width: 100%;
   margin: 0.4em;
   color: #eee;
@@ -99,6 +178,28 @@ main {
   background-color: #049c49;
   border-left: 1px solid #195836;
 }
+#controls1 button {
+  height: auto;
+  min-height: 2em;
+  width: 100%;
+  margin: 0.4em;
+  color: #eee;
+  background-color: #54bd84;
+  font-size: 1.5rem;
+  border-left: 10px solid #195836;
+  border-bottom: 4px solid #195836;
+}
+
+#controls1 button:hover {
+  cursor:pointer;
+  background-color: #049c49;
+  border-left: 1px solid #195836;
+}
+.actionBtn{
+  background-color: #f6e382 !important;
+  color: black !important;
+}
+
 
 .clickedButton {
   cursor:pointer;
@@ -107,14 +208,14 @@ main {
 }
 
 footer{
-  position:absolute;
+  /* position:absolute; */
   display: flex;
   place-items: center;
-  width: 100vw;
   bottom:0;
   height:60px;   /* Height of the footer */
   background:#005913;
   color:#fff;
+  margin-top: 50px;
 }
 footer p{
   margin: 10px;
@@ -169,6 +270,17 @@ footer p{
     }
 
     #controls button{
+      width: 40%;
+    }
+    #controls1{
+      grid-column-start: 1;
+      display: flex;
+      flex-direction: revert;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+
+    #controls1 button{
       width: 40%;
     }
 }
