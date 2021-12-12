@@ -1,5 +1,5 @@
 class Tamogotchi{
-    constructor(characterObj, dataSource){
+    constructor(htmlNode, dataSource){
         this.petName = '';
         this.characterObj = characterObj;
         this.initialFood = 60;
@@ -13,9 +13,9 @@ class Tamogotchi{
         //Audio
         this.audio = [new Audio('../audio/chainsaw.mp3'), new Audio('../audio/droplet.wav'), new Audio('../audio/cheerful.mp3'), 
         new Audio('../audio/heartbeat.wav'), new Audio('../audio/metal_falling.mp3'), new Audio('../audio/metal_impact.mp3'),
-        new Audio('../audio/metals_falling.wav'), new Audio('../audio/electricity.wav')];
+        new Audio('../audio/metals_falling.wav'), new Audio('../audio/electricity.wav'), new Audio('../audio/badumtss.wav')];
         //Animation arrays
-        this.animations = Array.from(Array(6), () => new Array()) //Two dimensional array with 6 elements. 
+        this.animations = Array.from(Array(7), () => new Array()) //Two dimensional array with 6 elements. 
         this._gsapDelayedCall = [];
         this.currentAnimation = '';
         this.neutralIndex = 0;
@@ -24,7 +24,9 @@ class Tamogotchi{
         this.sadIndex = 3;
         this.sickIndex = 4;
         this.deadIndex = 5;
+        this.jokeyIndex = 6;
         
+        this.characterObj = htmlNode.querySelector('#characterObj').contentDocument;;
         this.character = this.characterObj.getElementById('WAT9S');
         this.arms_conector = this.characterObj.getElementById('arms_conector');
         this.body = this.characterObj.getElementById('body');
@@ -68,14 +70,18 @@ class Tamogotchi{
         this.termometer = [this.termometer_fill, this.termometer_glass];
         this.previousEyes = [this.leftEyeball, this.rightEyeball, this.pupils];
         this.deadEyes = [this.leftDeadEye, this.rightDeadEye];
+
+        this.remainingEnergy = htmlNode.querySelector('#pointsContainerText');
+        this.petTalks = htmlNode.querySelector('#petSaysText');
     }
 
     fetchPetData(dataSource){
         fetch(dataSource)
             .then(response => response.json())
             .then(data => {
-                this.petMoods = data.petMoods;
-                this.petFoods = data.petFoods;
+                this.moods = data.petMoods;
+                this.foods = data.petFoods;
+                this.compliments = data.compliments;
             })
             .catch(err =>console.log(err));
     }
@@ -97,8 +103,15 @@ class Tamogotchi{
             this.food -=1;
     
             console.log(`${this.food} until I starve`);
+            this.remainingEnergy.innerText = `Energy: ${this.food}`;
             if(this.food<=0){
                 this.die();
+                //Play dead animation
+                this.reset();
+                if (this.currentAnimation != 'dead'){
+                    this.currentAnimation = 'dead';
+                    this.dead();
+                }
             }
         },this.metabolismRate);
     }
@@ -116,10 +129,38 @@ class Tamogotchi{
     
     feedRandomFood() {
         //Check if the food has been loaded/fetched first.
-        if (this.petFoods){
-            let randomFood = this.petFoods[Math.floor(this.petFoods.length*Math.random())];
-            console.log(`Eating ${randomFood.name}! That will add ${randomFood.foodPoints} points`);
-            this.food +=randomFood.foodPoints;
+        if (this.foods.length> 0){
+            if (this.food <= 0){
+                this.petTalks.innerText = 'OS Recovery System says: "Pet is dead. Please restart to attempt recovery"';
+                this.food = (this.foods <= 0) ? 0 : this.food; //Avoid negative health.
+                this.remainingEnergy.innerText = `Energy: ${this.food}`;
+            }
+            else{
+                let foodIndex = Math.floor(this.foods.length*Math.random());
+                let randomFood = this.foods[foodIndex];
+                if (randomFood.quantity > 0){
+                    this.foods[foodIndex].quantity -= -1;
+                    //Get added or substracted points.
+                    let badluck = Math.random();
+                    let text = '';
+                    if (badluck > randomFood.poisonFactor){
+                        this.food -=randomFood.foodPoints;
+                        this.food = (this.foods < 0) ? 0 : this.food; //Avoid negative health.
+                        text = `Eating ${randomFood.name}! Oh no! That was posinous and I lost ${randomFood.foodPoints} points`;
+                    }
+                    else{
+                        this.food +=randomFood.foodPoints;
+                        text = `Eating ${randomFood.name}! Yummy! I got ${randomFood.foodPoints} points`;
+                    }
+                    console.log(text);
+                    this.petTalks.innerText = text;
+                }
+                else{
+                    //No more of that food.
+                    this.foods.splice(foodIndex, 1);
+                    this.feedRandomFood(); //Look for something else;
+                }
+            }
         }
         else{
             console.log('Food is still being generated. Please try again some seconds later :D');
@@ -190,6 +231,10 @@ class Tamogotchi{
             yPercent: 0,
             xPercent: 0,
             rotation: "0"
+        });
+        //mouth
+        gsap.set([this.mouth],{
+            scaleY: 1,
         });
         //This actually works...(?)
         this.characterObj.data = 'img/character.svg';
@@ -323,9 +368,17 @@ class Tamogotchi{
             xPercent: -20,
             duration: 1
         });
-        this.animations[this.happyIndex][5] = gsap.to(this.happyMouth,{
-            fill: 'black',
-            duration:0.2
+        // this.animations[this.happyIndex][6] = gsap.to(this.happyMouth,{
+        //     fill: 'black',
+        //     duration:0.2
+        // });
+        this.animations[this.happyIndex][5] = gsap.fromTo([this.mouth],{
+            scaleY: 0.5,
+        },{
+            scaleY: 7,
+            repeat: -1,
+            yoyo: true,
+            duration: 0.2
         });
     }
 
@@ -411,6 +464,15 @@ class Tamogotchi{
             opacity: 1,
             fill: '#333436'
         });
+
+        this.animations[this.angryIndex][9] = gsap.fromTo([this.mouth],{
+            scaleY: 0.5,
+        },{
+            scaleY: 1.5,
+            repeat: -1,
+            yoyo: true,
+            duration: 0.2
+        });
     }
 
     sad(){
@@ -430,13 +492,21 @@ class Tamogotchi{
             opacity: 0,
             duration: 1
         });
-        this.animations[this.sadIndex][3] = gsap.to(this.mouth, {
-            opacity: 0
+        // this.animations[this.sadIndex][3] = gsap.to(this.mouth, {
+        //     opacity: 0
+        // });
+        this.animations[this.sadIndex][3] = gsap.fromTo([this.mouth],{
+            scaleY: 0.5,
+        },{
+            scaleY: 7,
+            repeat: -1,
+            yoyo: true,
+            duration: 0.2
         });
-        this.animations[this.sadIndex][4] = gsap.to(this.sadMouth, {
-            fill: 'black'
-        });
-        this.animations[this.sadIndex][5] = gsap.timeline({repeat: -1, yoyo: true})
+        // this.animations[this.sadIndex][7] = gsap.to(this.sadMouth, {
+        //     fill: 'black'
+        // });
+        this.animations[this.sadIndex][4] = gsap.timeline({repeat: -1, yoyo: true})
         .set([this.rightArm, this.leftArm], {
             rotation: "-10",
             transformOrigin: "50% 10%",
@@ -446,7 +516,7 @@ class Tamogotchi{
             transformOrigin: "50% 10%",
             duration: 1.5
         });
-        this.animations[this.sadIndex][6] = gsap.timeline({repeat: -1, yoyo: true})
+        this.animations[this.sadIndex][5] = gsap.timeline({repeat: -1, yoyo: true})
         .to(this.wheel, {
             scale: 0.9,
             transformOrigin: '50%, 0%',
@@ -457,7 +527,7 @@ class Tamogotchi{
             transformOrigin: '50%, 0%',
             duration: 0.5,
         });
-        this.animations[this.sadIndex][7] = gsap.to(this.pupils,{
+        this.animations[this.sadIndex][6] = gsap.to(this.pupils,{
             yPercent:90,
         });
         
@@ -631,6 +701,61 @@ class Tamogotchi{
         strokeOpacity: 1,
         duration: 3,
         filter: "blur(12px)" //Source: https://greensock.com/forums/topic/20180-motion-blur-with-svg-gaussianblur-tween-only-the-x-value/
+        });
+    }
+
+    jokey () {
+        this.reset();
+        this.playSound(8, 10, 'jokey');
+        this.animations[this.jokeyIndex][0] = gsap.timeline({repeat: -1, yoyo: true})
+        .to(this.leftPupil, {
+            xPercent: 60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.leftPupil, {
+            yPercent: 60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.leftPupil, {
+            xPercent: -60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.leftPupil, {
+            yPercent: -60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        });
+        this.animations[this.jokeyIndex][1] = gsap.timeline({repeat: -1, yoyo: true})
+        .to(this.rightPupil, {
+            xPercent: -60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.rightPupil, {
+            yPercent: -60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.rightPupil, {
+            xPercent: 60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        })
+        .to(this.rightPupil, {
+            yPercent: 60,
+            duration: 0.25,
+            ease: "none" //no easing because it is a continuous loop
+        });
+        this.animations[this.jokeyIndex][2] = gsap.fromTo([this.mouth],{
+            scaleY: 0.5,
+        },{
+            scaleY: 7,
+            repeat: -1,
+            yoyo: true,
+            duration: 0.2
         });
     }
 }
