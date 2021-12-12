@@ -1,0 +1,17 @@
+{
+    "name": "digipet-wat9s",
+    "version": "1.0.0",
+    "description": "",
+    "main": "js/script.js",
+    "scripts": {
+        "lite": "lite-server",
+        "start": "npm run lite"
+    },
+
+    "keywords": [],
+    "author": "Jeriel Benavides",
+    "license": "ISC",
+    "devDependencies": {
+    "lite-server": "^2.5.4"
+    }
+}
