@@ -1,14 +1,14 @@
 class Tamogotchi{
     constructor(htmlNode, dataSource){
-        this.petName = '';
+        this.petName = 'WAT9S';
+        this.ownerName = '';
+        this.isAlive = false;
         this.characterObj = characterObj;
         this.initialFood = 60;
         this.metabolismRate = 1000;
         this.dataSource = dataSource;
         //Fetch data
         console.log(`Hi!  I'm ${this.petName}`);
-        this.fetchPetData(this.dataSource);
-        this.hatch();
         //Animation Variables
         //Audio
         this.audio = [new Audio('../audio/chainsaw.mp3'), new Audio('../audio/droplet.wav'), new Audio('../audio/cheerful.mp3'), 
@@ -73,10 +73,14 @@ class Tamogotchi{
 
         this.remainingEnergy = htmlNode.querySelector('#pointsContainerText');
         this.petTalks = htmlNode.querySelector('#petSaysText');
+        this.timer = ms => new Promise(res => setTimeout(res, ms));
+        this.feastModeActive = false;
+
+        this.hatch();
     }
 
-    fetchPetData(dataSource){
-        fetch(dataSource)
+    fetchPetData(){
+        fetch(this.dataSource)
             .then(response => response.json())
             .then(data => {
                 this.moods = data.petMoods;
@@ -89,14 +93,30 @@ class Tamogotchi{
     resetFood(){
         this.food=this.initialFood;
     }
-    
-    hatch(){
+
+    resetPet(){
+        this.fetchPetData();
+        this.metabolismRate = 1000;
+        this.feastModeActive = false;
+        clearInterval(this.metabolism);
+        this.petTalks.innerText = "";
         this.resetFood();
         this.startMetabolism();
     }
+    
+    hatch(){
+        this.fetchPetData();
+        clearInterval(this.metabolism);
+        this.resetFood();
+        this.startMetabolism();
+        this.petTalks.innerText = "";
+    }
     die(){
         clearInterval(this.metabolism);
-        console.log("I am dead!"); //This prints the message even if we are only changing the metabolism.
+        this.isAlive = false;
+        // console.log("I am dead!"); //This prints the message even if we are only changing the metabolism.
+        this.petTalks.innerText = "Pet has died due to empty energy reserves. Please charge battery and restart.";
+        this.food = 0;
     }
     startMetabolism(){
         this.metabolism = setInterval(()=> {
@@ -106,6 +126,7 @@ class Tamogotchi{
             this.remainingEnergy.innerText = `Energy: ${this.food}`;
             if(this.food<=0){
                 this.die();
+                this.food = 0;
                 //Play dead animation
                 this.reset();
                 if (this.currentAnimation != 'dead'){
@@ -117,18 +138,102 @@ class Tamogotchi{
     }
     
     changeMetabolismRate(metabolismRate){
-        this.die();
+        clearInterval(this.metabolism);
         this.metabolismRate = metabolismRate;
         this.startMetabolism();
+    }
+
+    highPerformanceMode(){
+        console.log('Changing metabolismRate: High Performance Mode');
+        let foodPoints = this.food;
+        this.changeMetabolismRate(300);
+        this.food = foodPoints;
+    }
+
+    batterySaverMode(){
+        console.log('Changing metabolismRate: Battery Saver Mode');
+        let foodPoints = this.food;
+        this.changeMetabolismRate(2000);
+        this.food = foodPoints;
     }
     
     eatLasagna() {
         console.log(`can I see the food? ${this.food}`);
         this.food +=20;
     }
+    removeEmptyFoodContainers(food){
+        return food.quantity > 0; //Only keep if food is available for that category.
+    }
+
+    removeEmptyFood(){
+        console.log('I am working');
+        let tempArray = [];
+        this.foods.forEach((food)=>{
+            if (food.quantity > 0){
+                tempArray.push(food); //Not using splice because I am not sure if I can modify the array length during runtime...
+            }
+        });
+        this.foods = tempArray;
+    }
+
+    async feastMode(){
+            this.foods = this.foods.filter(this.removeEmptyFoodContainers); //Remove empty food (quantity == 0)
+            for (let i = 0; i < this.foods.length; i++){ //Does nothing when feast mode is disabled by starting the game, again.
+                if(this.feastModeActive){
+                    if(this.food> 0){
+                        let currentFood = this.foods[i];
+                    if (currentFood.quantity > 0){
+                        this.foods[i].quantity -= 1;
+                        //Get added or substracted points.
+                        let badluck = Math.random();
+                        let text = '';
+                        if (badluck < currentFood.poisonFactor){
+                            this.food -=currentFood.foodPoints;
+                            this.food = (this.foods < 0) ? 0 : this.food; //Avoid negative health.
+                            text = `FEAST MODE!! Eating ${currentFood.name}! Oh no! That was poisonous and I lost ${currentFood.foodPoints} points`;
+                        }
+                        else{
+                            this.food +=currentFood.foodPoints;
+                            text = `FEAST MODE!! Eating ${currentFood.name}! Yummy! I got ${currentFood.foodPoints} points`;
+                        }
+                        console.log(text);
+                        this.petTalks.innerText = text;
+                        this.talkAnimation();
+                    }
+                    await this.timer(500);
+                    // else{
+                    //     //No more of that food.
+                    //     this.foods.splice(i, 1);
+                    //     i--;
+                    // }
+                    }
+                }
+            }
+            //I have two methods for the same thing. I will keep filter.
+            this.foods = this.foods.filter(this.removeEmptyFoodContainers); //Remove empty food (quantity == 0)
+            // this.removeEmptyFood(); 
+            if (this.foods.length> 0 && this.food > 0){
+                if(this.feastModeActive){
+                this.feastMode(); //Start again
+                }
+                else{
+                    return;
+                }
+            }
+            else{
+                if(this.foods.length == 0 ){
+                    this.petTalks.innerText = 'OUT OF FOOD!!! FEAST MODE EMPTIED THE STORAGE';
+                }
+                if(this.food == 0 ){
+                    this.petTalks.innerText = "Pet has died due to empty energy reserves. Please charge battery and restart.";
+                }
+            }
+    }
     
     feedRandomFood() {
+        this.feastModeActive = false;
         //Check if the food has been loaded/fetched first.
+        this.foods = this.foods.filter(this.removeEmptyFoodContainers); //Remove empty food (quantity == 0)
         if (this.foods.length> 0){
             if (this.food <= 0){
                 this.petTalks.innerText = 'OS Recovery System says: "Pet is dead. Please restart to attempt recovery"';
@@ -139,14 +244,14 @@ class Tamogotchi{
                 let foodIndex = Math.floor(this.foods.length*Math.random());
                 let randomFood = this.foods[foodIndex];
                 if (randomFood.quantity > 0){
-                    this.foods[foodIndex].quantity -= -1;
+                    this.foods[foodIndex].quantity -= 1;
                     //Get added or substracted points.
                     let badluck = Math.random();
                     let text = '';
-                    if (badluck > randomFood.poisonFactor){
+                    if (badluck < randomFood.poisonFactor){
                         this.food -=randomFood.foodPoints;
                         this.food = (this.foods < 0) ? 0 : this.food; //Avoid negative health.
-                        text = `Eating ${randomFood.name}! Oh no! That was posinous and I lost ${randomFood.foodPoints} points`;
+                        text = `Eating ${randomFood.name}! Oh no! That was poisonous and I lost ${randomFood.foodPoints} points`;
                     }
                     else{
                         this.food +=randomFood.foodPoints;
@@ -154,6 +259,7 @@ class Tamogotchi{
                     }
                     console.log(text);
                     this.petTalks.innerText = text;
+                    this.talkAnimation();
                 }
                 else{
                     //No more of that food.
@@ -163,10 +269,39 @@ class Tamogotchi{
             }
         }
         else{
-            console.log('Food is still being generated. Please try again some seconds later :D');
+            this.petTalks.innerText = 'OUT OF FOOD!!!';
         }
     }
-
+    talkAnimation(){
+        gsap.fromTo([this.mouth],{
+            scaleY: 0.5,
+        },{
+            scaleY: 7,
+            repeat: 10,
+            yoyo: true,
+            duration: 0.2
+        });
+    }
+    talk(){
+        this.feastModeActive = false;
+        let quotes = this.moods[this.currentAnimation];
+        let randomQuote = quotes[Math.floor(quotes.length*Math.random())];
+        //Replace flag for name.
+        let finalText = randomQuote.replace("#NAME#", this.ownerName);
+        this.talkAnimation();
+        this.petTalks.innerText = finalText;
+    }
+    compliment(){
+        this.feastModeActive = false;
+        // if (this.currentAnimation != 'neutral'){
+        //     this.neutral();
+        // }
+        let randomQuote = this.compliments[Math.floor(this.compliments.length*Math.random())];
+        //Replace flag for name.
+        let finalText = randomQuote.replace("#NAME#", this.ownerName);
+        this.petTalks.innerText = finalText;
+        this.talkAnimation();
+    }
     introAnim(){
         gsap.from(this.character, {
             duration: 2,
@@ -254,6 +389,7 @@ class Tamogotchi{
 
     neutral(){
         this.reset();
+        this.petTalks.innerText = "";
         let anim_duration = 2;
         this.animations[this.neutralIndex][0] = gsap.set(this.pupils,{
             xPercent:0,
@@ -308,6 +444,8 @@ class Tamogotchi{
 
     happy() {
         this.reset();
+        this.feastModeActive = false;
+        this.talk();
         //Play audio
         this.audio[2].play();
         this.audio[2].loop = true;
@@ -384,6 +522,8 @@ class Tamogotchi{
 
     angry() {
         this.reset();
+        this.feastModeActive = false;
+        this.talk();
         this.audio[0].play();
         this.audio[0].loop = true;
         this.animations[this.angryIndex][1] = gsap.fromTo([this.pupils, this.mouth],{
@@ -477,6 +617,8 @@ class Tamogotchi{
 
     sad(){
         this.reset();
+        this.feastModeActive = false;
+        this.talk();
         this.playSound(1, 1, 'sad');
         this.animations[this.sadIndex][1] = gsap.to(this.tears,{
             fill: '#27aae1'
@@ -535,6 +677,8 @@ class Tamogotchi{
     //#sick
     sick(){
         this.reset();
+        this.feastModeActive = false;
+        this.talk();
         //Play Audio
         this.audio[3].play();
         this.audio[3].loop = true;
@@ -600,6 +744,7 @@ class Tamogotchi{
 
     dead(){
         this.reset();
+        this.feastModeActive = false;
         this.animations[this.deadIndex][1] = gsap.to(this.sadMouth,{
             fill: 'black',
             duration: 0.2
@@ -706,6 +851,8 @@ class Tamogotchi{
 
     jokey () {
         this.reset();
+        this.feastModeActive = false;
+        this.talk();
         this.playSound(8, 10, 'jokey');
         this.animations[this.jokeyIndex][0] = gsap.timeline({repeat: -1, yoyo: true})
         .to(this.leftPupil, {

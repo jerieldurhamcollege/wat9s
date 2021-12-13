@@ -15,7 +15,7 @@ window.onload = function(){
     
 
     let htmlNode = document.getElementById('mainContainer');
-    let pet = new Tamogotchi(htmlNode, 'data.json');
+    let pet;
     // * target buttons to trigger function
     let neutralBtn = document.getElementById('neutral');
     let happyBtn = document.getElementById('happy');
@@ -27,6 +27,14 @@ window.onload = function(){
     let feedBtn = document.getElementById('feed');
 
     let buttons = [neutralBtn, happyBtn, angryBtn, sadBtn, jokeyBtn, feedBtn];
+
+    let username = document.getElementById('username');
+    let startBtn = document.getElementById('startbtn');
+    let complimentBtn = document.getElementById('compliment');
+    let highPerformanceModeBtn = document.getElementById('highPerformance');
+    let batterySaverModeBtn = document.getElementById('batterySaver');
+    let feastModeBtn = document.getElementById('feastMode');
+    let restartBtn = document.getElementById('restartbtn');
 
     let audioAuthors = document.getElementById('footer_link_1');
     audioAuthors.addEventListener('click', function(){
@@ -50,13 +58,74 @@ window.onload = function(){
         });
     });
 
-    // **************** INTRO FADE ****************
-
     // **************** BUTTON EVENTS ****************
+    username.addEventListener('keyup', function(){
+        if (pet){
+            pet.ownerName = username.value;
+        }
+    });
+    restartBtn.addEventListener('click', function(){
+        if (pet){
+            pet.hatch();
+            pet.isAlive = true;
+            pet.reset();
+            if (pet.currentAnimation != 'neutral'){
+                pet.currentAnimation = 'neutral';
+                pet.resetBtns(buttons);
+                pet.clickedButton(neutralBtn); //Don't set neutral twice...
+                pet.neutral();
+            }
+        }
+    });
+    startBtn.addEventListener('click', function(){
+        //Only start if name is set. This does not work for empty spaces.
+        if (username.value){
+            if (pet){
+                pet.resetPet();
+            }
+            else{
+                pet = new Tamogotchi(htmlNode, 'data.json'); 
+            }
+            pet.isAlive = true;
+            pet.ownerName = username.value;
+            pet.reset();
+            if (pet.currentAnimation != 'neutral'){
+                pet.currentAnimation = 'neutral';
+                pet.resetBtns(buttons);
+                pet.clickedButton(neutralBtn); //Don't set neutral twice...
+                pet.neutral();
+            }   
+        }
+        else{
+            document.querySelector('#petSaysText').innerText = "Plese enter your name first";
+        }
+    });
+    highPerformanceModeBtn.addEventListener('click', function() {
+        if (pet && pet.isAlive){
+            pet.highPerformanceMode();
+        }
+    });
+    batterySaverModeBtn.addEventListener('click', function() {
+        if (pet && pet.isAlive){
+            pet.batterySaverMode();
+        }
+    });
+    feastModeBtn.addEventListener('click', function() {
+        if (pet && pet.isAlive){
+            pet.feastModeActive = true;
+            pet.feastMode();
+        }
+    });
+    complimentBtn.addEventListener('click', function() {
+        if (pet && pet.isAlive){
+            pet.compliment();
+            backToNeutral();
+        }
+    });
 
     //  * Add event listener and run function when we click
     neutralBtn.addEventListener('click', function() {
-    if (pet.currentAnimation != 'dead'){
+    if (pet && pet.isAlive){
         pet.reset();
         if (pet.currentAnimation != 'neutral'){
             pet.currentAnimation = 'neutral';
@@ -68,7 +137,7 @@ window.onload = function(){
     });
 
     happyBtn.addEventListener('click', function() {
-        if (pet.currentAnimation != 'dead'){
+        if (pet && pet.isAlive){
             pet.reset();
             if (pet.currentAnimation != 'happy'){
                 pet.currentAnimation = 'happy';
@@ -81,7 +150,7 @@ window.onload = function(){
     });
 
     angryBtn.addEventListener('click', function() {
-        if (pet.currentAnimation != 'dead'){
+        if (pet && pet.isAlive){
             pet.reset();
             if (pet.currentAnimation != 'angry'){
                 pet.currentAnimation = 'angry';
@@ -94,7 +163,7 @@ window.onload = function(){
     });
 
     sadBtn.addEventListener('click', function() {
-        if (pet.currentAnimation != 'dead'){
+        if (pet && pet.isAlive){
             pet.reset();
             if (pet.currentAnimation != 'sad'){
                 pet.currentAnimation = 'sad';
@@ -107,7 +176,7 @@ window.onload = function(){
     });
 
     jokeyBtn.addEventListener('click', function() {
-        if (pet.currentAnimation != 'dead'){
+        if (pet && pet.isAlive){
             pet.reset();
             if (pet.currentAnimation != 'jokey'){
                 pet.currentAnimation = 'jokey';
@@ -137,9 +206,11 @@ window.onload = function(){
     //     }
     // });
     feed.addEventListener('click', function() {
-        pet.resetBtns(buttons);
-        // pet.clickedButton(this);
-        pet.feedRandomFood();
+        if (pet && pet.isAlive){
+            pet.resetBtns(buttons);
+            // pet.clickedButton(this);
+            pet.feedRandomFood();
+        }
     });
     // **************** ANIMATION FUNCTIONS ****************
     let backToNeutral = function (){
@@ -151,6 +222,7 @@ window.onload = function(){
                 if (pet.currentAnimation != 'neutral'){
                     pet.currentAnimation = 'neutral';
                     pet.resetBtns(buttons);
+                    pet.clickedButton(neutralBtn);
                     pet.neutral();
                 }
             }
@@ -159,12 +231,12 @@ window.onload = function(){
 
 
     //On load
-    pet.neutral();
-    setTimeout(function(){
-        console.log(pet.moods);
-        console.log(pet.foods);
-        console.log(pet.compliments);
-    }, 2000);
+    //pet.neutral();
+    // setTimeout(function(){
+    //     console.log(pet.moods);
+    //     console.log(pet.foods);
+    //     console.log(pet.compliments);
+    // }, 2000);
 
 }
 
